@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Procevia - Performance & Technology</title>
+<link rel="icon" type="image/jpeg" href="https://raw.githubusercontent.com/Vincentpernarh1/Procevia/main/procevia%20logo.jpeg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
@@ -39,7 +40,17 @@
     }
 
     header img {
-        height: 50px;
+        height: 60px; /* Increased size for prominence */
+        transition: transform 0.3s ease;
+    }
+    
+    header img:hover {
+        transform: scale(1.05); /* Added hover effect */
+    }
+
+    .header-menu {
+        display: flex;
+        align-items: center;
     }
 
     nav {
@@ -85,10 +96,20 @@
         cursor: pointer;
         font-weight: 600;
         transition: background-color 0.3s ease;
+        margin-left: 20px;
     }
      
     .lang-toggle:hover {
         background-color: #005a4f;
+    }
+    
+    .menu-toggle {
+        display: none; /* Hidden on desktop */
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: var(--primary-color);
     }
 
     .hero {
@@ -361,11 +382,53 @@
 
     @media (max-width: 880px) {
         header {
-            flex-direction: column;
             padding: 15px 20px;
+            flex-wrap: nowrap;
         }
-        nav {
-            margin: 15px 0;
+
+        .menu-toggle {
+            display: block; /* Show on mobile */
+        }
+
+        .header-menu {
+            display: none; /* Hide menu by default */
+            position: absolute;
+            top: 90px; /* Adjust based on header's actual height */
+            left: 0;
+            right: 0;
+            background: var(--card-bg);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .header-menu.active {
+            display: flex; /* Show menu when active */
+        }
+
+        /* Adjustments for items inside the dropdown */
+        .header-menu nav {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin: 0; /* Reset margin */
+        }
+        
+        .header-menu nav a {
+            width: 100%;
+            text-align: center;
+            padding: 1rem 0;
+            margin: 0;
+        }
+
+        .header-menu nav a::after {
+            display: none; /* No underlines in dropdown */
+        }
+
+        .header-menu .lang-toggle {
+            margin-top: 1rem; /* Space between nav and lang toggle */
+            margin-left: 0;
         }
     }
      
@@ -389,16 +452,21 @@
 <body>
 
 <header>
-    <img src="https://placehold.co/200x50/ffffff/00796b?text=Procevia&font=poppins" alt="Procevia Logo" onerror="this.onerror=null;this.src='https://placehold.co/200x50/ffffff/00796b?text=Procevia&font=poppins';">
-    <nav>
-        <a href="#services" data-lang-key="navSolutions">Solutions</a>
-        <a href="#expertise" data-lang-key="navExpertise">Expertise</a>
-        <a href="#cases" data-lang-key="navResults">Results</a>
-        <a href="#about" data-lang-key="navAbout">About Us</a>
-        <a href="#partners" data-lang-key="navPartners">Partners</a>
-        <a href="#contact" data-lang-key="navContact">Contact</a>
-    </nav>
-    <button class="lang-toggle" onclick="toggleLang()">EN / PT</button>
+    <img src="https://raw.githubusercontent.com/Vincentpernarh1/Procevia/main/procevia%20logo.jpeg" alt="Procevia Logo" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/Vincentpernarh1/Procevia/main/procevia%20logo.jpeg';">
+    <div class="header-menu" id="header-menu">
+        <nav>
+            <a href="#services" data-lang-key="navSolutions">Solutions</a>
+            <a href="#expertise" data-lang-key="navExpertise">Expertise</a>
+            <a href="#cases" data-lang-key="navResults">Results</a>
+            <a href="#about" data-lang-key="navAbout">About Us</a>
+            <a href="#partners" data-lang-key="navPartners">Partners</a>
+            <a href="#contact" data-lang-key="navContact">Contact</a>
+        </nav>
+        <button class="lang-toggle" onclick="toggleLang()">EN / PT</button>
+    </div>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+        <i class="fas fa-bars"></i>
+    </button>
 </header>
 
 <div class="hero">
@@ -686,6 +754,20 @@
 
     document.addEventListener('DOMContentLoaded', () => {
         setLanguage(currentLang);
+
+        const menuToggle = document.getElementById('menu-toggle');
+        const headerMenu = document.getElementById('header-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            headerMenu.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('#header-menu nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                headerMenu.classList.remove('active');
+            });
+        });
     });
 </script>
 
