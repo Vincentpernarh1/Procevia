@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Procevia - Performance & Technology</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+    :root {
+        --primary-color: #00796b;
+        --secondary-color: #ff9800;
+        --background-color: #f4f7f6;
+        --text-color: #333;
+        --card-bg: #ffffff;
+    }
+
+    body {
+        margin: 0;
+        font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--background-color);
+        color: var(--text-color);
+        scroll-behavior: smooth;
+    }
+
+    header {
+        background: var(--card-bg);
+        padding: 15px 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        flex-wrap: wrap;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    header img {
+        height: 50px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: var(--primary-color);
+        font-weight: 600;
+        margin: 5px 20px;
+        transition: color 0.3s ease;
+        position: relative;
+    }
+     
+    nav a::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -5px;
+        left: 0;
+        background-color: var(--secondary-color);
+        transition: width 0.3s ease;
+    }
+
+    nav a:hover {
+        color: var(--secondary-color);
+    }
+     
+    nav a:hover::after {
+        width: 100%;
+    }
+
+    .lang-toggle {
+        background: var(--primary-color);
+        color: white;
+        border: none;
+        padding: 8px 14px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+    }
+     
+    .lang-toggle:hover {
+        background-color: #005a4f;
+    }
+
+    .hero {
+        text-align: center;
+        padding: 80px 20px;
+        background: linear-gradient(135deg, #005f56, #ff9800);
+        color: white;
+    }
+
+    .hero h1 {
+        font-size: 3.2em;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+
+    .hero p {
+        font-size: 1.3em;
+        max-width: 800px;
+        margin: 0 auto;
+        opacity: 0.9;
+    }
+
+    .section {
+        padding: 60px 20px;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .section h2 {
+        color: var(--primary-color);
+        margin-bottom: 40px;
+        text-align: center;
+        font-size: 2.5em;
+        font-weight: 700;
+    }
+
+    .services, .case-studies, .team {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
+     
+    .partners-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: center;
+        align-items: center;
+    }
+     
+    .partner-logo {
+        height: 50px;
+        filter: grayscale(100%);
+        opacity: 0.7;
+        transition: filter 0.3s ease, opacity 0.3s ease;
+    }
+     
+    .partner-logo:hover {
+        filter: grayscale(0%);
+        opacity: 1;
+    }
+
+    .card {
+        background: var(--card-bg);
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+     
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+    }
+
+    .card .card-icon {
+        font-size: 3em;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+    }
+
+    .card h3 {
+        color: var(--secondary-color);
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-size: 1.5em;
+    }
+     
+    .card p {
+        line-height: 1.6;
+        flex-grow: 1;
+    }
+     
+    .case-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        border: 1px solid #eee;
+    }
+
+    .expertise-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .tech-item {
+        background: var(--card-bg);
+        padding: 20px 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        font-size: 1.2em;
+        font-weight: 600;
+        transition: transform 0.3s ease;
+    }
+     
+    .tech-item:hover {
+        transform: scale(1.05);
+    }
+
+    .tech-item i {
+        font-size: 2em;
+        color: var(--primary-color);
+        width: 40px;
+        text-align: center;
+    }
+
+    .contact-form {
+        margin-top: 30px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+        background: var(--card-bg);
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: var(--primary-color);
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        padding: 15px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-family: 'Poppins', sans-serif;
+        box-sizing: border-box;
+        transition: border-color 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+        outline: none;
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 3px rgba(0, 121, 107, 0.2);
+    }
+
+    .submit-btn {
+        background: var(--secondary-color);
+        color: white;
+        border: none;
+        padding: 15px 25px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: 600;
+        width: 100%;
+        font-size: 1.1em;
+        transition: background-color 0.3s ease;
+    }
+
+    .submit-btn:hover {
+        background: #e68900;
+    }
+     
+    .team-card {
+        text-align: center;
+    }
+     
+    .team-card img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 15px;
+        border: 4px solid var(--primary-color);
+    }
+     
+    .team-card h3 {
+        color: var(--primary-color);
+    }
+
+    .social-media {
+        background-color: var(--background-color);
+        padding-top: 0;
+        padding-bottom: 40px;
+    }
+    .social-icons {
+        text-align: center;
+    }
+    .social-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: var(--primary-color);
+        color: white;
+        margin: 0 15px;
+        font-size: 22px;
+        text-decoration: none;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .social-icon:hover {
+        background-color: var(--secondary-color);
+        transform: scale(1.1);
+    }
+
+    footer {
+        background-color: #333;
+        color: #f4f7f6;
+        text-align: center;
+        padding: 20px 50px;
+    }
+
+    .whatsapp-float {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 40px;
+        right: 40px;
+        background-color: #25d366;
+        color: #FFF;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 2px 2px 3px #999;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+
+    .whatsapp-float:hover {
+        background-color: #128C7E;
+    }
+
+
+    @media (max-width: 880px) {
+        header {
+            flex-direction: column;
+            padding: 15px 20px;
+        }
+        nav {
+            margin: 15px 0;
+        }
+    }
+     
+    @media (max-width: 768px) {
+        .hero h1 {
+            font-size: 2.5em;
+        }
+        .hero p {
+            font-size: 1.1em;
+        }
+        .whatsapp-float {
+            width: 50px;
+            height: 50px;
+            bottom: 20px;
+            right: 20px;
+            font-size: 24px;
+        }
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <img src="https://placehold.co/200x50/ffffff/00796b?text=Procevia&font=poppins" alt="Procevia Logo" onerror="this.onerror=null;this.src='https://placehold.co/200x50/ffffff/00796b?text=Procevia&font=poppins';">
+    <nav>
+        <a href="#services" data-lang-key="navSolutions">Solutions</a>
+        <a href="#expertise" data-lang-key="navExpertise">Expertise</a>
+        <a href="#cases" data-lang-key="navResults">Results</a>
+        <a href="#about" data-lang-key="navAbout">About Us</a>
+        <a href="#partners" data-lang-key="navPartners">Partners</a>
+        <a href="#contact" data-lang-key="navContact">Contact</a>
+    </nav>
+    <button class="lang-toggle" onclick="toggleLang()">EN / PT</button>
+</header>
+
+<div class="hero">
+    <h1 data-lang-key="heroTitle">From Data Overload to Decisive Action</h1>
+    <p data-lang-key="heroText">We transform your complex operational data into a strategic advantage, streamlining workflows and unlocking new pathways to efficiency and growth.</p>
+</div>
+
+<section id="services" class="section">
+    <h2 data-lang-key="servicesTitle">Nossas Soluções Principais</h2>
+    <div class="services">
+        <div class="card">
+            <div class="card-icon"><i class="fas fa-cogs"></i></div>
+            <h3 data-lang-key="service1Title">Intelligent Workflow Automation</h3>
+            <p data-lang-key="service1Text">We build smart automation engines that liberate your team from manual, repetitive tasks, allowing them to focus on high-value initiatives that drive your business forward.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon"><i class="fas fa-chart-pie"></i></div>
+            <h3 data-lang-key="service2Title">Insightful Data Dashboards</h3>
+            <p data-lang-key="service2Text">We craft bespoke, interactive dashboards that translate raw numbers into a clear story, giving you the real-time visibility needed to make confident, data-backed decisions.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon"><i class="fas fa-stream"></i></div>
+            <h3 data-lang-key="service3Title">Strategic Process Optimization</h3>
+            <p data-lang-key="service3Text">By meticulously analyzing your existing workflows, we identify critical bottlenecks and inefficiencies, redesigning your processes for maximum output and a stronger ROI.</p>
+        </div>
+    </div>
+</section>
+
+<section id="expertise" class="section" style="background-color: #e8eeed;">
+    <h2 data-lang-key="expertiseTitle">Nossa Expertise</h2>
+    <div class="expertise-grid">
+        <div class="tech-item"><i class="fa-solid fa-gears"></i><span data-lang-key="expertisePowerAutomate">Microsoft Power Automate</span></div>
+        <div class="tech-item"><i class="fa-solid fa-bolt"></i><span data-lang-key="expertiseZapier">Zapier</span></div>
+        <div class="tech-item"><i class="fa-brands fa-python"></i><span data-lang-key="expertisePython">Python</span></div>
+        <div class="tech-item"><i class="fa-solid fa-chart-simple"></i><span data-lang-key="expertisePowerBI">Power BI</span></div>
+        <div class="tech-item"><i class="fa-solid fa-chart-line"></i><span data-lang-key="expertiseDataStudio">Google Data Studio</span></div>
+        <div class="tech-item"><i class="fa-solid fa-layer-group"></i><span data-lang-key="expertiseRPA">RPA</span></div>
+        <div class="tech-item"><i class="fa-solid fa-mobile-screen-button"></i><span data-lang-key="expertisePowerApps">Power Apps</span></div>
+        <div class="tech-item"><i class="fa-solid fa-comments"></i><span data-lang-key="expertiseChatBot">Chat Bot</span></div>
+        <div class="tech-item"><i class="fa-solid fa-brain"></i><span data-lang-key="expertiseAI">AI</span></div>
+        <div class="tech-item"><i class="fa-solid fa-project-diagram"></i><span data-lang-key="expertiseMachineLearning">Machine Learning</span></div>
+        <div class="tech-item"><i class="fa-solid fa-database"></i><span data-lang-key="expertiseSQL">SQL</span></div>
+        <div class="tech-item"><i class="fa-solid fa-snowflake"></i><span data-lang-key="expertiseSnowflake">Snowflake</span></div>
+        <div class="tech-item"><i class="fa-brands fa-google"></i><span data-lang-key="expertiseGCP">GCP</span></div>
+    </div>
+</section>
+
+<section id="cases" class="section">
+    <h2 data-lang-key="casesTitle">Proven Results</h2>
+    <div class="case-studies">
+        <div class="card case-card">
+            <img src="https://thereportinghub.com/img/power-bi-dashboards/marketing-campaign-dashboard.svg" alt="Dashboard showing financial automation" onerror="this.onerror=null;this.src='https://placehold.co/600x400/00796b/ffffff?text=Financial+Report';">
+            <h3 data-lang-key="case1Title">From 5 Days to 2 Hours</h3>
+            <p data-lang-key="case1Text">For a leading automotive manufacturer, we automated a critical reporting system, drastically reducing monthly closing time and freeing up the finance team.</p>
+        </div>
+        <div class="card case-card">
+            <img src="https://i.ytimg.com/vi/G8ikAJele_s/hq720.jpg" alt="Dashboard showing inventory accuracy" onerror="this.onerror=null;this.src='https://placehold.co/600x400/ff9800/ffffff?text=Inventory+Accuracy';">
+            <h3 data-lang-key="case2Title">85% Reduction in Manual Errors</h3>
+            <p data-lang-key="case2Text">We implemented a new inventory automation process for a major logistics partner, boosting data accuracy and operational speed.</p>
+        </div>
+        <div class="card case-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPFjbHBO4GmYV65xNF3E0l5IcvjbasrOyt_w&s" alt="Diagram showing workflow automation" onerror="this.onerror=null;this.src='https://placehold.co/600x400/333333/ffffff?text=Workflow+Automation';">
+            <h3 data-lang-key="case3Title">40% Improvement in Performance Tracking</h3>
+            <p data-lang-key="case3Text">A custom, real-time logistics dashboard provided a global shipping leader with unprecedented visibility, enhancing their delivery performance.</p>
+        </div>
+        <div class="card case-card">
+            <img src="https://ef43287171.cbaul-cdnwnd.com/35835353fd11f6f9c2ed7b2a2b5bc48b/200000074-d676fd6771/dash%2001.png?ph=ef43287171" alt="Business intelligence dashboard" onerror="this.onerror=null;this.src='https://placehold.co/600x400/00796b/ffffff?text=Financial+Overview';">
+            <h3 data-lang-key="case4Title">Unified Financial Overview</h3>
+            <p data-lang-key="case4Text">We developed a centralized dashboard for a retail client, consolidating data from multiple sources to provide a single, clear view of their financial health.</p>
+        </div>
+        <div class="card case-card">
+            <img src="https://onlinedegrees.sandiego.edu/wp-content/uploads/2023/05/6-careers-you-can-get-with-python.jpg" alt="Python code on a computer screen" onerror="this.onerror=null;this.src='https://placehold.co/600x400/ff9800/ffffff?text=Custom+Scripting';">
+            <h3 data-lang-key="case5Title">Custom Scripting for Data Processing</h3>
+            <p data-lang-key="case5Text">For a tech startup, we created custom Python scripts to automate complex data processing tasks, saving hundreds of hours of manual work per month.</p>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="section" style="background-color: #e8eeed;">
+    <h2 data-lang-key="aboutTitle">Meet Our Team</h2>
+    <div class="team">
+        <div class="card team-card">
+            <img src="https://placehold.co/120x120/cccccc/333333?text=VP" alt="Vincent Pernarh">
+            <h3 data-lang-key="aboutVincentName">Vincent Pernarh</h3>
+            <p data-lang-key="aboutVincent">Co-founder with a passion for leveraging technology to solve complex business problems and drive strategic growth.</p>
+        </div>
+        <div class="card team-card">
+            <img src="https://placehold.co/120x120/cccccc/333333?text=KS" alt="Karyne Scheneyder">
+            <h3 data-lang-key="aboutKaryneName">Karyne Scheneyder</h3>
+            <p data-lang-key="aboutKaryne">Co-founder specializing in process analysis and optimization, dedicated to helping clients achieve peak operational efficiency.</p>
+        </div>
+    </div>
+</section>
+
+<section id="partners" class="section">
+    <h2 data-lang-key="partnersTitle">Our Partners & Clients</h2>
+    <div class="partners-grid">
+        <img src="https://placehold.co/150x50/ffffff/cccccc?text=Client+A" alt="Partner Logo 1" class="partner-logo">
+        <img src="https://placehold.co/150x50/ffffff/cccccc?text=Partner+B" alt="Partner Logo 2" class="partner-logo">
+        <img src="https://placehold.co/150x50/ffffff/cccccc?text=Client+C" alt="Partner Logo 3" class="partner-logo">
+        <img src="https://placehold.co/150x50/ffffff/cccccc?text=Partner+D" alt="Partner Logo 4" class="partner-logo">
+        <img src="https://placehold.co/150x50/ffffff/cccccc?text=Client+E" alt="Partner Logo 5" class="partner-logo">
+    </div>
+</section>
+
+<section id="contact" class="section">
+    <h2 data-lang-key="contactTitle">Let's Build Your Solution</h2>
+    <p data-lang-key="contactInfo" style="text-align: center; margin-bottom: 30px;">Ready to transform your business? Reach out to us directly or fill out the form below.</p>
+    <p style="text-align: center; font-weight: 600;">Email: procevia.tech@gmail.com | Phone / WhatsApp: +55 31 9152-6927</p>
+
+    <form id="contact-form" class="contact-form" action="mailto:procevia.tech@gmail.com" method="POST" enctype="text/plain">
+        <div class="form-group">
+            <label for="name" data-lang-key="labelName">Name</label>
+            <input type="text" id="name" name="name" data-lang-key="namePlaceholder" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+            <label for="email" data-lang-key="labelEmail">Email</label>
+            <input type="email" id="email" name="email" data-lang-key="emailPlaceholder" placeholder="Your Email Address" required>
+        </div>
+        <div class="form-group">
+            <label for="message" data-lang-key="labelMessage">Message</label>
+            <textarea id="message" name="message" rows="5" data-lang-key="messagePlaceholder" placeholder="How can we help you achieve your goals?" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn" data-lang-key="submitBtn">Send Message</button>
+    </form>
+</section>
+
+<section class="social-media section">
+    <h2 data-lang-key="socialTitle">Follow Us</h2>
+    <div class="social-icons">
+        <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Procevia. All Rights Reserved.</p>
+</footer>
+
+<a href="https://wa.me/553191526927" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+    const langData = {
+        pt: {
+            navSolutions: "Soluções",
+            navExpertise: "Expertise",
+            navResults: "Resultados",
+            navAbout: "Sobre Nós",
+            navPartners: "Parceiros",
+            navContact: "Contato",
+            heroTitle: "Do Excesso de Dados à Ação Decisiva",
+            heroText: "Transformamos seus dados operacionais complexos em uma vantagem estratégica, otimizando fluxos de trabalho e descobrindo novos caminhos para a eficiência e o crescimento.",
+            servicesTitle: "Nossas Soluções Principais",
+            service1Title: "Automação Inteligente de Fluxos de Trabalho",
+            service1Text: "Construímos motores de automação inteligentes que libertam sua equipe de tarefas manuais e repetitivas, permitindo que foquem em iniciativas de alto valor que impulsionam seu negócio.",
+            service2Title: "Dashboards de Dados Perspicazes",
+            service2Text: "Criamos dashboards personalizados e interativos que traduzem números brutos em uma história clara, fornecendo a visibilidade em tempo real necessária para tomar decisões confiantes e baseadas em dados.",
+            service3Title: "Otimização Estratégica de Processos",
+            service3Text: "Analisando meticulosamente seus fluxos de trabalho, identificamos gargalos e ineficiências, redesenhando seus processos para máxima produtividade e um maior retorno sobre o investimento.",
+            expertiseTitle: "Nossa Expertise",
+            expertisePowerAutomate: "Microsoft Power Automate",
+            expertiseZapier: "Zapier",
+            expertisePython: "Python",
+            expertisePowerBI: "Power BI",
+            expertiseDataStudio: "Google Data Studio",
+            expertiseRPA: "RPA",
+            expertisePowerApps: "Power Apps",
+            expertiseChatBot: "Chat Bot",
+            expertiseAI: "IA (Inteligência Artificial)",
+            expertiseMachineLearning: "Machine Learning",
+            expertiseSQL: "SQL",
+            expertiseSnowflake: "Snowflake",
+            expertiseGCP: "GCP (Google Cloud Platform)",
+            casesTitle: "Resultados Comprovados",
+            case1Title: "De 5 Dias para 2 Horas",
+            case1Text: "Para uma fabricante automotiva líder, automatizamos um sistema de relatórios crítico, reduzindo drasticamente o tempo de fechamento mensal e liberando a equipe financeira.",
+            case2Title: "Redução de 85% em Erros Manuais",
+            case2Text: "Implementamos um novo processo de automação de inventário para um grande parceiro logístico, aumentando a precisão dos dados e a velocidade operacional.",
+            case3Title: "Melhora de 40% no Rastreamento de Performance",
+            case3Text: "Um dashboard logístico personalizado e em tempo real forneceu a um líder global de remessas uma visibilidade sem precedentes, melhorando seu desempenho de entrega.",
+            case4Title: "Visão Financeira Unificada",
+            case4Text: "Desenvolvemos um dashboard centralizado para um cliente de varejo, consolidando dados de múltiplas fontes para fornecer uma visão única e clara de sua saúde financeira.",
+            case5Title: "Scripts Personalizados para Processamento de Dados",
+            case5Text: "Para uma startup de tecnologia, criamos scripts Python personalizados para automatizar tarefas complexas de processamento de dados, economizando centenas de horas de trabalho manual por mês.",
+            aboutTitle: "Conheça Nossa Equipe",
+            aboutVincentName: "Vincent Pernarh",
+            aboutVincent: "Cofundador com paixão por alavancar tecnologia para resolver problemas de negócios complexos e impulsionar o crescimento estratégico.",
+            aboutKaryneName: "Karyne Scheneyder",
+            aboutKaryne: "Cofundadora especializada em análise e otimização de processos, dedicada a ajudar clientes a alcançar a máxima eficiência operacional.",
+            partnersTitle: "Nossos Parceiros e Clientes",
+            contactTitle: "Vamos Construir Sua Solução",
+            contactInfo: "Pronto para transformar seu negócio? Entre em contato conosco ou preencha o formulário abaixo.",
+            labelName: "Nome",
+            labelEmail: "Email",
+            labelMessage: "Mensagem",
+            namePlaceholder: "Seu Nome",
+            emailPlaceholder: "Seu Endereço de Email",
+            messagePlaceholder: "Como podemos te ajudar a alcançar seus objetivos?",
+            submitBtn: "Enviar Mensagem",
+            socialTitle: "Siga-nos"
+        },
+        en: {
+            navSolutions: "Solutions",
+            navExpertise: "Expertise",
+            navResults: "Results",
+            navAbout: "About Us",
+            navPartners: "Partners",
+            navContact: "Contact",
+            heroTitle: "From Data Overload to Decisive Action",
+            heroText: "We transform your complex operational data into a strategic advantage, streamlining workflows and unlocking new pathways to efficiency and growth.",
+            servicesTitle: "Our Core Solutions",
+            service1Title: "Intelligent Workflow Automation",
+            service1Text: "We build smart automation engines that liberate your team from manual, repetitive tasks, allowing them to focus on high-value initiatives that drive your business forward.",
+            service2Title: "Insightful Data Dashboards",
+            service2Text: "We craft bespoke, interactive dashboards that translate raw numbers into a clear story, giving you the real-time visibility needed to make confident, data-backed decisions.",
+            service3Title: "Strategic Process Optimization",
+            service3Text: "By meticulously analyzing your existing workflows, we identify critical bottlenecks and inefficiencies, redesigning your processes for maximum output and a stronger ROI.",
+            expertiseTitle: "Our Expertise",
+            expertisePowerAutomate: "Microsoft Power Automate",
+            expertiseZapier: "Zapier",
+            expertisePython: "Python",
+            expertisePowerBI: "Power BI",
+            expertiseDataStudio: "Google Data Studio",
+            expertiseRPA: "RPA",
+            expertisePowerApps: "Power Apps",
+            expertiseChatBot: "Chat Bot",
+            expertiseAI: "AI (Artificial Intelligence)",
+            expertiseMachineLearning: "Machine Learning",
+            expertiseSQL: "SQL",
+            expertiseSnowflake: "Snowflake",
+            expertiseGCP: "GCP (Google Cloud Platform)",
+            casesTitle: "Proven Results",
+            case1Title: "From 5 Days to 2 Hours",
+            case1Text: "For a leading automotive manufacturer, we automated a critical reporting system, drastically reducing monthly closing time and freeing up the finance team.",
+            case2Title: "85% Reduction in Manual Errors",
+            case2Text: "We implemented a new inventory automation process for a major logistics partner, boosting data accuracy and operational speed.",
+            case3Title: "40% Improvement in Performance Tracking",
+            case3Text: "A custom, real-time logistics dashboard provided a global shipping leader with unprecedented visibility, enhancing their delivery performance.",
+            case4Title: "Unified Financial Overview",
+            case4Text: "We developed a centralized dashboard for a retail client, consolidating data from multiple sources to provide a single, clear view of their financial health.",
+            case5Title: "Custom Scripting for Data Processing",
+            case5Text: "For a tech startup, we created custom Python scripts to automate complex data processing tasks, saving hundreds of hours of manual work per month.",
+            aboutTitle: "Meet Our Team",
+            aboutVincentName: "Vincent Pernarh",
+            aboutVincent: "Co-founder with a passion for leveraging technology to solve complex business problems and drive strategic growth.",
+            aboutKaryneName: "Karyne Scheneyder",
+            aboutKaryne: "Co-founder specializing in process analysis and optimization, dedicated to helping clients achieve peak operational efficiency.",
+            partnersTitle: "Our Partners & Clients",
+            contactTitle: "Let's Build Your Solution",
+            contactInfo: "Ready to transform your business? Reach out to us directly or fill out the form below.",
+            labelName: "Name",
+            labelEmail: "Email",
+            labelMessage: "Message",
+            namePlaceholder: "Your Name",
+            emailPlaceholder: "Your Email Address",
+            messagePlaceholder: "How can we help you achieve your goals?",
+            submitBtn: "Send Message",
+            socialTitle: "Follow Us"
+        }
+    };
+
+    let currentLang = 'pt';
+
+    function setLanguage(lang) {
+        const l = langData[lang];
+        document.querySelectorAll('[data-lang-key]').forEach(elem => {
+            const key = elem.dataset.langKey;
+            if (l[key]) {
+                if (elem.placeholder !== undefined) {
+                    elem.placeholder = l[key];
+                } else {
+                    elem.textContent = l[key];
+                }
+            }
+        });
+    }
+
+    function toggleLang() {
+        currentLang = currentLang === 'pt' ? 'en' : 'pt';
+        setLanguage(currentLang);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        setLanguage(currentLang);
+    });
+</script>
+
+</body>
+</html>
