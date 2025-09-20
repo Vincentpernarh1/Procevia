@@ -1,0 +1,480 @@
+:root {
+    --primary-color: #00796b;
+    --secondary-color: #ff9800;
+    --background-color: #f4f7f6;
+    --text-color: #333;
+    --card-bg: #ffffff;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    scroll-behavior: smooth;
+}
+
+header {
+    background: var(--card-bg);
+    padding: 15px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header img {
+    height: 60px;
+    transition: transform 0.3s ease;
+}
+
+header img:hover {
+    transform: scale(1.05);
+}
+
+/* Style for the header title */
+header h3 {
+    color: var(--primary-color);
+    margin: 0 15px;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.header-menu {
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin: 5px 20px;
+    transition: color 0.3s ease;
+    position: relative;
+}
+    
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--secondary-color);
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--secondary-color);
+}
+    
+nav a:hover::after {
+    width: 100%;
+}
+
+.lang-toggle {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-left: 20px;
+}
+    
+.lang-toggle:hover {
+    background-color: #005a4f;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #005f56, #ff9800);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3.2em;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.3em;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+.section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section h2 {
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+.services, .case-studies, .team {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+    
+.partners-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+    
+.partner-logo {
+    height: 50px;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+}
+    
+.partner-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+    
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+}
+
+.card .card-icon {
+    font-size: 3em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    color: var(--secondary-color);
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+    
+.card p {
+    line-height: 1.6;
+    flex-grow: 1;
+}
+    
+.case-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #eee;
+}
+
+/* MODIFIED: Styles for the enhanced expertise section */
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.tech-item {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+    
+.tech-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.08);
+}
+
+.tech-item i {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.tech-item h4 {
+    margin: 0;
+    color: var(--text-color);
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.tech-item p {
+    margin: 0;
+    font-size: 0.9em;
+    line-height: 1.5;
+    color: #666;
+    font-weight: 400;
+}
+
+/* NEW: Styles for the CTA banner after case studies */
+.cta-banner {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.contact-form {
+    margin-top: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 121, 107, 0.2);
+}
+
+/* MODIFIED: Made submit button more versatile */
+.submit-btn {
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+    width: auto;
+}
+
+/* Keeps the form button full-width */
+.contact-form .submit-btn {
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background: #e68900;
+    transform: translateY(-2px);
+}
+    
+.team-card {
+    text-align: center;
+    align-items: center;
+}
+    
+.team-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 4px solid var(--primary-color);
+}
+    
+.team-card h3 {
+    color: var(--primary-color);
+}
+
+.social-media {
+    background-color: var(--background-color);
+    padding-top: 0;
+    padding-bottom: 40px;
+}
+.social-icons {
+    text-align: center;
+}
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    margin: 0 15px;
+    font-size: 22px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.social-icon:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+footer {
+    background-color: #333;
+    color: #f4f7f6;
+    text-align: center;
+    padding: 20px 50px;
+}
+
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    background-color: #128C7E;
+}
+
+
+@media (max-width: 880px) {
+    header {
+        padding: 15px 20px;
+        flex-wrap: nowrap;
+    }
+    
+    header h3 {
+        font-size: 1.2em; /* Adjust title size on mobile */
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .header-menu {
+        display: none;
+        position: absolute;
+        top: 80px; /* Adjust based on your final header height */
+        left: 0;
+        right: 0;
+        background: var(--card-bg);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+    }
+
+    .header-menu.active {
+        display: flex;
+    }
+
+    .header-menu nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+    }
+    
+    .header-menu nav a {
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+        margin: 0;
+    }
+
+    .header-menu nav a::after {
+        display: none;
+    }
+
+    .header-menu .lang-toggle {
+        margin-top: 1rem;
+        margin-left: 0;
+    }
+}
+    
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5em;
+    }
+    .hero p {
+        font-size: 1.1em;
+    }
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 24px;
+    }
+}

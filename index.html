@@ -4,462 +4,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Procevia - Performance & Technology</title>
-<link rel="icon" type="image/jpeg" href="https://raw.githubusercontent.com/Vincentpernarh1/Procevia/main/procevia%20logo.jpeg">
+<link rel="icon" type="image/jpeg" href="https://raw.githubusercontent.com/Vincentpernarh1/Procevia/main/procevia_logo2.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<style>
-    :root {
-        --primary-color: #00796b;
-        --secondary-color: #ff9800;
-        --background-color: #f4f7f6;
-        --text-color: #333;
-        --card-bg: #ffffff;
-    }
+<link rel="stylesheet" href="index.css">
 
-    body {
-        margin: 0;
-        font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: var(--background-color);
-        color: var(--text-color);
-        scroll-behavior: smooth;
-    }
-
-    header {
-        background: var(--card-bg);
-        padding: 15px 50px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-        flex-wrap: wrap;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-    }
-
-    header img {
-        height: 60px; /* Increased size for prominence */
-        transition: transform 0.3s ease;
-    }
-    
-    header img:hover {
-        transform: scale(1.05); /* Added hover effect */
-    }
-
-    .header-menu {
-        display: flex;
-        align-items: center;
-    }
-
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    nav a {
-        text-decoration: none;
-        color: var(--primary-color);
-        font-weight: 600;
-        margin: 5px 20px;
-        transition: color 0.3s ease;
-        position: relative;
-    }
-     
-    nav a::after {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 2px;
-        bottom: -5px;
-        left: 0;
-        background-color: var(--secondary-color);
-        transition: width 0.3s ease;
-    }
-
-    nav a:hover {
-        color: var(--secondary-color);
-    }
-     
-    nav a:hover::after {
-        width: 100%;
-    }
-
-    .lang-toggle {
-        background: var(--primary-color);
-        color: white;
-        border: none;
-        padding: 8px 14px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-weight: 600;
-        transition: background-color 0.3s ease;
-        margin-left: 20px;
-    }
-     
-    .lang-toggle:hover {
-        background-color: #005a4f;
-    }
-    
-    .menu-toggle {
-        display: none; /* Hidden on desktop */
-        background: none;
-        border: none;
-        font-size: 24px;
-        cursor: pointer;
-        color: var(--primary-color);
-    }
-
-    .hero {
-        text-align: center;
-        padding: 80px 20px;
-        background: linear-gradient(135deg, #005f56, #ff9800);
-        color: white;
-    }
-
-    .hero h1 {
-        font-size: 3.2em;
-        margin-bottom: 20px;
-        font-weight: 700;
-    }
-
-    .hero p {
-        font-size: 1.3em;
-        max-width: 800px;
-        margin: 0 auto;
-        opacity: 0.9;
-    }
-
-    .section {
-        padding: 60px 20px;
-        max-width: 1200px;
-        margin: auto;
-    }
-
-    .section h2 {
-        color: var(--primary-color);
-        margin-bottom: 40px;
-        text-align: center;
-        font-size: 2.5em;
-        font-weight: 700;
-    }
-
-    .services, .case-studies, .team {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 30px;
-    }
-     
-    .partners-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 40px;
-        justify-content: center;
-        align-items: center;
-    }
-     
-    .partner-logo {
-        height: 50px;
-        filter: grayscale(100%);
-        opacity: 0.7;
-        transition: filter 0.3s ease, opacity 0.3s ease;
-    }
-     
-    .partner-logo:hover {
-        filter: grayscale(0%);
-        opacity: 1;
-    }
-
-    .card {
-        background: var(--card-bg);
-        border-radius: 10px;
-        padding: 30px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-    }
-     
-    .card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 15px 25px rgba(0,0,0,0.1);
-    }
-
-    .card .card-icon {
-        font-size: 3em;
-        color: var(--primary-color);
-        margin-bottom: 20px;
-    }
-
-    .card h3 {
-        color: var(--secondary-color);
-        margin-top: 0;
-        margin-bottom: 15px;
-        font-size: 1.5em;
-    }
-     
-    .card p {
-        line-height: 1.6;
-        flex-grow: 1;
-    }
-     
-    .case-card img {
-        width: 100%;
-        height: 220px;
-        object-fit: cover;
-        border-radius: 8px;
-        margin-bottom: 20px;
-        border: 1px solid #eee;
-    }
-
-    .expertise-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 20px;
-        justify-content: center;
-    }
-
-    .tech-item {
-        background: var(--card-bg);
-        padding: 20px 30px;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        font-size: 1.2em;
-        font-weight: 600;
-        transition: transform 0.3s ease;
-    }
-     
-    .tech-item:hover {
-        transform: scale(1.05);
-    }
-
-    .tech-item i {
-        font-size: 2em;
-        color: var(--primary-color);
-        width: 40px;
-        text-align: center;
-    }
-
-    .contact-form {
-        margin-top: 30px;
-        max-width: 700px;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: left;
-        background: var(--card-bg);
-        padding: 40px;
-        border-radius: 10px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    }
-
-    .form-group {
-        margin-bottom: 20px;
-    }
-
-    .form-group label {
-        display: block;
-        margin-bottom: 8px;
-        font-weight: 600;
-        color: var(--primary-color);
-    }
-
-    .form-group input,
-    .form-group textarea {
-        width: 100%;
-        padding: 15px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-        font-family: 'Poppins', sans-serif;
-        box-sizing: border-box;
-        transition: border-color 0.3s ease;
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus {
-        outline: none;
-        border-color: var(--primary-color);
-        box-shadow: 0 0 0 3px rgba(0, 121, 107, 0.2);
-    }
-
-    .submit-btn {
-        background: var(--secondary-color);
-        color: white;
-        border: none;
-        padding: 15px 25px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-weight: 600;
-        width: 100%;
-        font-size: 1.1em;
-        transition: background-color 0.3s ease;
-    }
-
-    .submit-btn:hover {
-        background: #e68900;
-    }
-     
-    .team-card {
-        text-align: center;
-    }
-     
-    .team-card img {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-bottom: 15px;
-        border: 4px solid var(--primary-color);
-    }
-     
-    .team-card h3 {
-        color: var(--primary-color);
-    }
-
-    .social-media {
-        background-color: var(--background-color);
-        padding-top: 0;
-        padding-bottom: 40px;
-    }
-    .social-icons {
-        text-align: center;
-    }
-    .social-icon {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background-color: var(--primary-color);
-        color: white;
-        margin: 0 15px;
-        font-size: 22px;
-        text-decoration: none;
-        transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-    .social-icon:hover {
-        background-color: var(--secondary-color);
-        transform: scale(1.1);
-    }
-
-    footer {
-        background-color: #333;
-        color: #f4f7f6;
-        text-align: center;
-        padding: 20px 50px;
-    }
-
-    .whatsapp-float {
-        position: fixed;
-        width: 60px;
-        height: 60px;
-        bottom: 40px;
-        right: 40px;
-        background-color: #25d366;
-        color: #FFF;
-        border-radius: 50px;
-        text-align: center;
-        font-size: 30px;
-        box-shadow: 2px 2px 3px #999;
-        z-index: 100;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        transition: background-color 0.3s ease;
-    }
-
-    .whatsapp-float:hover {
-        background-color: #128C7E;
-    }
-
-
-    @media (max-width: 880px) {
-        header {
-            padding: 15px 20px;
-            flex-wrap: nowrap;
-        }
-
-        .menu-toggle {
-            display: block; /* Show on mobile */
-        }
-
-        .header-menu {
-            display: none; /* Hide menu by default */
-            position: absolute;
-            top: 90px; /* Adjust based on header's actual height */
-            left: 0;
-            right: 0;
-            background: var(--card-bg);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            flex-direction: column;
-            align-items: center;
-            padding: 1rem 0;
-        }
-
-        .header-menu.active {
-            display: flex; /* Show menu when active */
-        }
-
-        /* Adjustments for items inside the dropdown */
-        .header-menu nav {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            margin: 0; /* Reset margin */
-        }
-        
-        .header-menu nav a {
-            width: 100%;
-            text-align: center;
-            padding: 1rem 0;
-            margin: 0;
-        }
-
-        .header-menu nav a::after {
-            display: none; /* No underlines in dropdown */
-        }
-
-        .header-menu .lang-toggle {
-            margin-top: 1rem; /* Space between nav and lang toggle */
-            margin-left: 0;
-        }
-    }
-     
-    @media (max-width: 768px) {
-        .hero h1 {
-            font-size: 2.5em;
-        }
-        .hero p {
-            font-size: 1.1em;
-        }
-        .whatsapp-float {
-            width: 50px;
-            height: 50px;
-            bottom: 20px;
-            right: 20px;
-            font-size: 24px;
-        }
-    }
-</style>
 </head>
 <body>
 
 <header>
-    <img src="https://raw.githubusercontent.com/Vincentpernarh1/Procevia/main/procevia%20logo.jpeg" alt="Procevia Logo" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/Vincentpernarh1/Procevia/main/procevia%20logo.jpeg';">
+    <img src="https://raw.githubusercontent.com/Vincentpernarh1/Procevia/main/procevia_logo2.jpg" alt="Procevia Logo" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/Vincentpernarh1/Procevia/main/procevia_logo2.jpg';">
+    <h3>PROCEVIA</h3>
     <div class="header-menu" id="header-menu">
         <nav>
             <a href="#services" data-lang-key="navSolutions">Solutions</a>
             <a href="#expertise" data-lang-key="navExpertise">Expertise</a>
             <a href="#cases" data-lang-key="navResults">Results</a>
             <a href="#about" data-lang-key="navAbout">About Us</a>
-            <a href="#partners" data-lang-key="navPartners">Partners</a>
             <a href="#contact" data-lang-key="navContact">Contact</a>
         </nav>
         <button class="lang-toggle" onclick="toggleLang()">EN / PT</button>
@@ -471,15 +34,20 @@
 
 <div class="hero">
     <h1 data-lang-key="heroTitle">From Data Overload to Decisive Action</h1>
-    <p data-lang-key="heroText">We transform your complex operational data into a strategic advantage, streamlining workflows and unlocking new pathways to efficiency and growth.</p>
+    <p data-lang-key="heroText">We transform your complex operational data into a strategic advantage, streamlining workflows, unlocking insights, and deploying intelligent AI agents to drive growth.</p>
 </div>
 
 <section id="services" class="section">
-    <h2 data-lang-key="servicesTitle">Nossas Soluções Principais</h2>
+    <h2 data-lang-key="servicesTitle">Our Core Solutions</h2>
     <div class="services">
         <div class="card">
+            <div class="card-icon"><i class="fas fa-brain"></i></div>
+            <h3 data-lang-key="service4Title">Intelligent AI Agents</h3>
+            <p data-lang-key="service4Text">We develop custom AI agents that access live data and internal tools, providing instant, accurate answers to complex business questions and automating decision-making.</p>
+        </div>
+        <div class="card">
             <div class="card-icon"><i class="fas fa-cogs"></i></div>
-            <h3 data-lang-key="service1Title">Intelligent Workflow Automation</h3>
+            <h3 data-lang-key="service1Title">Workflow Automation</h3>
             <p data-lang-key="service1Text">We build smart automation engines that liberate your team from manual, repetitive tasks, allowing them to focus on high-value initiatives that drive your business forward.</p>
         </div>
         <div class="card">
@@ -496,27 +64,79 @@
 </section>
 
 <section id="expertise" class="section" style="background-color: #e8eeed;">
-    <h2 data-lang-key="expertiseTitle">Nossa Expertise</h2>
-    <div class="expertise-grid">
-        <div class="tech-item"><i class="fa-solid fa-gears"></i><span data-lang-key="expertisePowerAutomate">Microsoft Power Automate</span></div>
-        <div class="tech-item"><i class="fa-solid fa-bolt"></i><span data-lang-key="expertiseZapier">Zapier</span></div>
-        <div class="tech-item"><i class="fa-brands fa-python"></i><span data-lang-key="expertisePython">Python</span></div>
-        <div class="tech-item"><i class="fa-solid fa-chart-simple"></i><span data-lang-key="expertisePowerBI">Power BI</span></div>
-        <div class="tech-item"><i class="fa-solid fa-chart-line"></i><span data-lang-key="expertiseDataStudio">Google Data Studio</span></div>
-        <div class="tech-item"><i class="fa-solid fa-layer-group"></i><span data-lang-key="expertiseRPA">RPA</span></div>
-        <div class="tech-item"><i class="fa-solid fa-mobile-screen-button"></i><span data-lang-key="expertisePowerApps">Power Apps</span></div>
-        <div class="tech-item"><i class="fa-solid fa-comments"></i><span data-lang-key="expertiseChatBot">Chat Bot</span></div>
-        <div class="tech-item"><i class="fa-solid fa-brain"></i><span data-lang-key="expertiseAI">AI</span></div>
-        <div class="tech-item"><i class="fa-solid fa-project-diagram"></i><span data-lang-key="expertiseMachineLearning">Machine Learning</span></div>
-        <div class="tech-item"><i class="fa-solid fa-database"></i><span data-lang-key="expertiseSQL">SQL</span></div>
-        <div class="tech-item"><i class="fa-solid fa-snowflake"></i><span data-lang-key="expertiseSnowflake">Snowflake</span></div>
-        <div class="tech-item"><i class="fa-brands fa-google"></i><span data-lang-key="expertiseGCP">GCP</span></div>
+    <h2 data-lang-key="expertiseTitle">Our Expertise</h2>
+    <div class="expertise-grid tech-descriptions">
+        <div class="tech-item">
+            <i class="fa-solid fa-robot"></i>
+            <h4 data-lang-key="expertiseAIAgents">AI Agent Development</h4>
+            <p data-lang-key="descAIAgents">Building intelligent agents that connect to your business data and tools to provide real-time answers.</p>
+        </div>
+        <div class="tech-item">
+            <i class="fa-brands fa-python"></i>
+            <h4 data-lang-key="expertisePython">Python</h4>
+            <p data-lang-key="descPython">For complex challenges, we write custom scripts to create powerful, bespoke automation solutions.</p>
+        </div>
+        <div class="tech-item">
+            <i class="fa-solid fa-gears"></i>
+            <h4 data-lang-key="expertisePowerAutomate">Microsoft Power Automate</h4>
+            <p data-lang-key="descPowerAutomate">We build no-code workflows that connect your existing apps, saving you hours every day.</p>
+        </div>
+        <div class="tech-item">
+            <i class="fa-solid fa-chart-simple"></i>
+            <h4 data-lang-key="expertisePowerBI">Power BI</h4>
+            <p data-lang-key="descPowerBI">We turn your raw data into clear, interactive dashboards for smarter decision-making.</p>
+        </div>
+        <div class="tech-item">
+            <i class="fa-solid fa-bolt"></i>
+            <h4 data-lang-key="expertiseZapier">Zapier</h4>
+            <p data-lang-key="descZapier">We integrate over 3,000 web applications to automate tasks between your most-used tools.</p>
+        </div>
+        <div class="tech-item">
+            <i class="fa-solid fa-database"></i>
+            <h4 data-lang-key="expertiseSQL">SQL</h4>
+            <p data-lang-key="descSQL">We manage and query your databases to ensure data integrity and power your analytics.</p>
+        </div>
+        <div class="tech-item">
+            <i class="fa-solid fa-chart-line"></i>
+            <h4 data-lang-key="expertiseDataStudio">Google Data Studio</h4>
+            <p data-lang-key="descDataStudio">We create and share compelling data visualizations and reports with Google's powerful tools.</p>
+        </div>
+        <div class="tech-item">
+            <i class="fa-solid fa-layer-group"></i>
+            <h4 data-lang-key="expertiseRPA">RPA</h4>
+            <p data-lang-key="descRPA">We deploy software robots to handle repetitive, rule-based tasks on legacy systems.</p>
+        </div>
+        <div class="tech-item">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+            <h4 data-lang-key="expertisePowerApps">Power Apps</h4>
+            <p data-lang-key="descPowerApps">We build custom low-code applications to solve your unique business challenges quickly.</p>
+        </div>
+        <div class="tech-item">
+            <i class="fa-solid fa-comments"></i>
+            <h4 data-lang-key="expertiseChatBot">Chat Bot</h4>
+            <p data-lang-key="descChatBot">We create intelligent chatbots to automate customer service and internal support tasks.</p>
+        </div>
+        <div class="tech-item">
+            <i class="fa-solid fa-project-diagram"></i>
+            <h4 data-lang-key="expertiseMachineLearning">Machine Learning</h4>
+            <p data-lang-key="descMachineLearning">We leverage predictive models to forecast trends and uncover hidden opportunities in your data.</p>
+        </div>
+        <div class="tech-item">
+            <i class="fa-brands fa-google"></i>
+            <h4 data-lang-key="expertiseGCP">GCP</h4>
+            <p data-lang-key="descGCP">We utilize Google Cloud Platform for scalable and reliable data storage and processing.</p>
+        </div>
     </div>
 </section>
 
 <section id="cases" class="section">
     <h2 data-lang-key="casesTitle">Proven Results</h2>
     <div class="case-studies">
+        <div class="card case-card">
+            <img src="https://images.ctfassets.net/5965pury2lcm/1EEj0m4w5CIiJ2m24L4dXV/9924513768343cbf4b69325983c27b00/LangChain.jpg" alt="AI Agent Interface" onerror="this.onerror=null;this.src='https://placehold.co/600x400/00796b/ffffff?text=AI+Agent';">
+            <h3 data-lang-key="case6Title">AI-Powered Business Insights</h3>
+            <p data-lang-key="case6Text">For a global logistics leader, we developed an AI agent to answer complex business questions by accessing live data, providing instant and accurate operational insights.</p>
+        </div>
         <div class="card case-card">
             <img src="https://thereportinghub.com/img/power-bi-dashboards/marketing-campaign-dashboard.svg" alt="Dashboard showing financial automation" onerror="this.onerror=null;this.src='https://placehold.co/600x400/00796b/ffffff?text=Financial+Report';">
             <h3 data-lang-key="case1Title">From 5 Days to 2 Hours</h3>
@@ -543,32 +163,24 @@
             <p data-lang-key="case5Text">For a tech startup, we created custom Python scripts to automate complex data processing tasks, saving hundreds of hours of manual work per month.</p>
         </div>
     </div>
+    <div class="cta-banner">
+        <a href="#contact" class="submit-btn" data-lang-key="ctaButton">Ready to Automate?</a>
+    </div>
 </section>
 
 <section id="about" class="section" style="background-color: #e8eeed;">
     <h2 data-lang-key="aboutTitle">Meet Our Team</h2>
     <div class="team">
         <div class="card team-card">
-            <img src="https://placehold.co/120x120/cccccc/333333?text=VP" alt="Vincent Pernarh">
+            <img src="https://github.com/Vincentpernarh1/Procevia/blob/main/profile.jpeg?raw=true" alt="Vincent Pernarh">
             <h3 data-lang-key="aboutVincentName">Vincent Pernarh</h3>
-            <p data-lang-key="aboutVincent">Co-founder with a passion for leveraging technology to solve complex business problems and drive strategic growth.</p>
+            <p data-lang-key="aboutVincent">Co-founder & AI/Data Specialist. With 3 years of Supply Chain experience, Vincent has developed complex systems and automations for global leaders like DHL in São Paulo. A Control and Automation Engineer from UFMG, he specializes in Python, C#, and React/Next.js to build intelligent, end-to-end solutions that turn complex data into strategic advantages.</p>
         </div>
         <div class="card team-card">
             <img src="https://placehold.co/120x120/cccccc/333333?text=KS" alt="Karyne Scheneyder">
             <h3 data-lang-key="aboutKaryneName">Karyne Scheneyder</h3>
-            <p data-lang-key="aboutKaryne">Co-founder specializing in process analysis and optimization, dedicated to helping clients achieve peak operational efficiency.</p>
+            <p data-lang-key="aboutKaryne">Co-founder & Data Strategist. Karyne excels at translating business needs into data-driven insights and empowers teams by creating clear, actionable dashboards in Power BI.</p>
         </div>
-    </div>
-</section>
-
-<section id="partners" class="section">
-    <h2 data-lang-key="partnersTitle">Our Partners & Clients</h2>
-    <div class="partners-grid">
-        <img src="https://placehold.co/150x50/ffffff/cccccc?text=Client+A" alt="Partner Logo 1" class="partner-logo">
-        <img src="https://placehold.co/150x50/ffffff/cccccc?text=Partner+B" alt="Partner Logo 2" class="partner-logo">
-        <img src="https://placehold.co/150x50/ffffff/cccccc?text=Client+C" alt="Partner Logo 3" class="partner-logo">
-        <img src="https://placehold.co/150x50/ffffff/cccccc?text=Partner+D" alt="Partner Logo 4" class="partner-logo">
-        <img src="https://placehold.co/150x50/ffffff/cccccc?text=Client+E" alt="Partner Logo 5" class="partner-logo">
     </div>
 </section>
 
@@ -597,9 +209,9 @@
 <section class="social-media section">
     <h2 data-lang-key="socialTitle">Follow Us</h2>
     <div class="social-icons">
-        <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="social-icon" target="_blank"  aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/procevia.tech?igsh=MWNjaWx4YnFsYXRveg%3D%3D&utm_source=qr" class="social-icon" target="_blank"  aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon" target="_blank"  aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
     </div>
 </section>
 
@@ -618,48 +230,62 @@
             navExpertise: "Expertise",
             navResults: "Resultados",
             navAbout: "Sobre Nós",
-            navPartners: "Parceiros",
             navContact: "Contato",
             heroTitle: "Do Excesso de Dados à Ação Decisiva",
-            heroText: "Transformamos seus dados operacionais complexos em uma vantagem estratégica, otimizando fluxos de trabalho e descobrindo novos caminhos para a eficiência e o crescimento.",
+            heroText: "Transformamos seus dados operacionais complexos em uma vantagem estratégica, otimizando fluxos de trabalho, descobrindo insights e implementando agentes de IA inteligentes para impulsionar o crescimento.",
             servicesTitle: "Nossas Soluções Principais",
-            service1Title: "Automação Inteligente de Fluxos de Trabalho",
-            service1Text: "Construímos motores de automação inteligentes que libertam sua equipe de tarefas manuais e repetitivas, permitindo que foquem em iniciativas de alto valor que impulsionam seu negócio.",
+            service1Title: "Automação de Fluxos de Trabalho",
+            service1Text: "Construímos motores de automação que libertam sua equipe de tarefas manuais, permitindo que foquem em iniciativas de alto valor.",
             service2Title: "Dashboards de Dados Perspicazes",
-            service2Text: "Criamos dashboards personalizados e interativos que traduzem números brutos em uma história clara, fornecendo a visibilidade em tempo real necessária para tomar decisões confiantes e baseadas em dados.",
+            service2Text: "Criamos dashboards interativos que traduzem números brutos em uma história clara, fornecendo a visibilidade necessária para tomar decisões confiantes.",
             service3Title: "Otimização Estratégica de Processos",
-            service3Text: "Analisando meticulosamente seus fluxos de trabalho, identificamos gargalos e ineficiências, redesenhando seus processos para máxima produtividade e um maior retorno sobre o investimento.",
+            service3Text: "Analisando seus fluxos de trabalho, identificamos gargalos e redesenhamos seus processos para máxima produtividade e um maior ROI.",
+            service4Title: "Agentes de IA Inteligentes",
+            service4Text: "Desenvolvemos agentes de IA personalizados que acessam dados ao vivo e ferramentas internas, fornecendo respostas instantâneas e precisas para questões de negócios complexas e automatizando a tomada de decisões.",
             expertiseTitle: "Nossa Expertise",
+            expertiseAIAgents: "Desenvolvimento de Agentes de IA",
+            descAIAgents: "Construindo agentes inteligentes que se conectam aos dados e ferramentas da sua empresa para fornecer respostas em tempo real.",
             expertisePowerAutomate: "Microsoft Power Automate",
-            expertiseZapier: "Zapier",
+            descPowerAutomate: "Construímos fluxos de trabalho sem código que conectam seus aplicativos existentes, economizando horas todos os dias.",
             expertisePython: "Python",
+            descPython: "Para desafios complexos, escrevemos scripts personalizados para criar soluções de automação poderosas e sob medida.",
             expertisePowerBI: "Power BI",
-            expertiseDataStudio: "Google Data Studio",
-            expertiseRPA: "RPA",
-            expertisePowerApps: "Power Apps",
-            expertiseChatBot: "Chat Bot",
-            expertiseAI: "IA (Inteligência Artificial)",
-            expertiseMachineLearning: "Machine Learning",
+            descPowerBI: "Transformamos seus dados brutos em dashboards claros e interativos para uma tomada de decisão mais inteligente.",
+            expertiseZapier: "Zapier",
+            descZapier: "Integramos mais de 3.000 aplicações web para automatizar tarefas entre suas ferramentas mais usadas.",
             expertiseSQL: "SQL",
-            expertiseSnowflake: "Snowflake",
-            expertiseGCP: "GCP (Google Cloud Platform)",
+            descSQL: "Gerenciamos e consultamos seus bancos de dados para garantir a integridade dos dados e potencializar suas análises.",
+            expertiseDataStudio: "Google Data Studio",
+            descDataStudio: "Criamos e compartilhamos visualizações de dados e relatórios atraentes com as poderosas ferramentas do Google.",
+            expertiseRPA: "RPA",
+            descRPA: "Implementamos robôs de software para lidar com tarefas repetitivas e baseadas em regras em sistemas legados.",
+            expertisePowerApps: "Power Apps",
+            descPowerApps: "Construímos aplicativos personalizados de baixo código para resolver seus desafios de negócios exclusivos rapidamente.",
+            expertiseChatBot: "Chat Bot",
+            descChatBot: "Criamos chatbots inteligentes para automatizar o atendimento ao cliente e tarefas de suporte interno.",
+            expertiseMachineLearning: "Machine Learning",
+            descMachineLearning: "Utilizamos modelos preditivos para prever tendências e descobrir oportunidades ocultas em seus dados.",
+            expertiseGCP: "GCP",
+            descGCP: "Utilizamos o Google Cloud Platform para armazenamento e processamento de dados escaláveis e confiáveis.",
             casesTitle: "Resultados Comprovados",
+            ctaButton: "Pronto para Automatizar?",
             case1Title: "De 5 Dias para 2 Horas",
-            case1Text: "Para uma fabricante automotiva líder, automatizamos um sistema de relatórios crítico, reduzindo drasticamente o tempo de fechamento mensal e liberando a equipe financeira.",
+            case1Text: "Para uma fabricante automotiva líder, automatizamos um sistema de relatórios crítico, reduzindo drasticamente o tempo de fechamento mensal.",
             case2Title: "Redução de 85% em Erros Manuais",
-            case2Text: "Implementamos um novo processo de automação de inventário para um grande parceiro logístico, aumentando a precisão dos dados e a velocidade operacional.",
+            case2Text: "Implementamos um novo processo de automação de inventário para um grande parceiro logístico, aumentando a precisão dos dados.",
             case3Title: "Melhora de 40% no Rastreamento de Performance",
-            case3Text: "Um dashboard logístico personalizado e em tempo real forneceu a um líder global de remessas uma visibilidade sem precedentes, melhorando seu desempenho de entrega.",
+            case3Text: "Um dashboard logístico em tempo real forneceu a um líder global de remessas uma visibilidade sem precedentes, melhorando seu desempenho.",
             case4Title: "Visão Financeira Unificada",
-            case4Text: "Desenvolvemos um dashboard centralizado para um cliente de varejo, consolidando dados de múltiplas fontes para fornecer uma visão única e clara de sua saúde financeira.",
+            case4Text: "Desenvolvemos um dashboard centralizado para um cliente de varejo, consolidando dados para fornecer uma visão clara de sua saúde financeira.",
             case5Title: "Scripts Personalizados para Processamento de Dados",
-            case5Text: "Para uma startup de tecnologia, criamos scripts Python personalizados para automatizar tarefas complexas de processamento de dados, economizando centenas de horas de trabalho manual por mês.",
+            case5Text: "Para uma startup de tecnologia, criamos scripts Python para automatizar o processamento de dados, economizando centenas de horas de trabalho manual.",
+            case6Title: "Insights de Negócios com IA",
+            case6Text: "Para um líder global de logística, desenvolvemos um agente de IA para responder a perguntas complexas de negócios acessando dados ao vivo, fornecendo insights operacionais instantâneos e precisos.",
             aboutTitle: "Conheça Nossa Equipe",
             aboutVincentName: "Vincent Pernarh",
-            aboutVincent: "Cofundador com paixão por alavancar tecnologia para resolver problemas de negócios complexos e impulsionar o crescimento estratégico.",
+            aboutVincent: "Cofundador e Especialista em IA e Dados. Com 3 anos de experiência em Supply Chain, Vincent desenvolveu sistemas e automações complexas para líderes globais como a DHL em São Paulo. Formado em Engenharia de Controle e Automação pela UFMG, ele é especialista em Python, C# e React/Next.js para construir soluções inteligentes de ponta a ponta que transformam dados complexos em vantagens estratégicas.",
             aboutKaryneName: "Karyne Scheneyder",
-            aboutKaryne: "Cofundadora especializada em análise e otimização de processos, dedicada a ajudar clientes a alcançar a máxima eficiência operacional.",
-            partnersTitle: "Nossos Parceiros e Clientes",
+            aboutKaryne: "Cofundadora e Estrategista de Dados. Karyne se destaca em traduzir as necessidades de negócios em insights baseados em dados e capacita equipes criando dashboards claros e acionáveis no Power BI.",
             contactTitle: "Vamos Construir Sua Solução",
             contactInfo: "Pronto para transformar seu negócio? Entre em contato conosco ou preencha o formulário abaixo.",
             labelName: "Nome",
@@ -676,32 +302,45 @@
             navExpertise: "Expertise",
             navResults: "Results",
             navAbout: "About Us",
-            navPartners: "Partners",
             navContact: "Contact",
             heroTitle: "From Data Overload to Decisive Action",
-            heroText: "We transform your complex operational data into a strategic advantage, streamlining workflows and unlocking new pathways to efficiency and growth.",
+            heroText: "We transform your complex operational data into a strategic advantage, streamlining workflows, unlocking insights, and deploying intelligent AI agents to drive growth.",
             servicesTitle: "Our Core Solutions",
-            service1Title: "Intelligent Workflow Automation",
+            service1Title: "Workflow Automation",
             service1Text: "We build smart automation engines that liberate your team from manual, repetitive tasks, allowing them to focus on high-value initiatives that drive your business forward.",
             service2Title: "Insightful Data Dashboards",
             service2Text: "We craft bespoke, interactive dashboards that translate raw numbers into a clear story, giving you the real-time visibility needed to make confident, data-backed decisions.",
             service3Title: "Strategic Process Optimization",
             service3Text: "By meticulously analyzing your existing workflows, we identify critical bottlenecks and inefficiencies, redesigning your processes for maximum output and a stronger ROI.",
+            service4Title: "Intelligent AI Agents",
+            service4Text: "We develop custom AI agents that access live data and internal tools, providing instant, accurate answers to complex business questions and automating decision-making.",
             expertiseTitle: "Our Expertise",
+            expertiseAIAgents: "AI Agent Development",
+            descAIAgents: "Building intelligent agents that connect to your business data and tools to provide real-time answers.",
             expertisePowerAutomate: "Microsoft Power Automate",
-            expertiseZapier: "Zapier",
+            descPowerAutomate: "We build no-code workflows that connect your existing apps, saving you hours every day.",
             expertisePython: "Python",
+            descPython: "For complex challenges, we write custom scripts to create powerful, bespoke automation solutions.",
             expertisePowerBI: "Power BI",
-            expertiseDataStudio: "Google Data Studio",
-            expertiseRPA: "RPA",
-            expertisePowerApps: "Power Apps",
-            expertiseChatBot: "Chat Bot",
-            expertiseAI: "AI (Artificial Intelligence)",
-            expertiseMachineLearning: "Machine Learning",
+            descPowerBI: "We turn your raw data into clear, interactive dashboards for smarter decision-making.",
+            expertiseZapier: "Zapier",
+            descZapier: "We integrate over 3,000 web applications to automate tasks between your most-used tools.",
             expertiseSQL: "SQL",
-            expertiseSnowflake: "Snowflake",
-            expertiseGCP: "GCP (Google Cloud Platform)",
+            descSQL: "We manage and query your databases to ensure data integrity and power your analytics.",
+            expertiseDataStudio: "Google Data Studio",
+            descDataStudio: "We create and share compelling data visualizations and reports with Google's powerful tools.",
+            expertiseRPA: "RPA",
+            descRPA: "We deploy software robots to handle repetitive, rule-based tasks on legacy systems.",
+            expertisePowerApps: "Power Apps",
+            descPowerApps: "We build custom low-code applications to solve your unique business challenges quickly.",
+            expertiseChatBot: "Chat Bot",
+            descChatBot: "We create intelligent chatbots to automate customer service and internal support tasks.",
+            expertiseMachineLearning: "Machine Learning",
+            descMachineLearning: "We leverage predictive models to forecast trends and uncover hidden opportunities in your data.",
+            expertiseGCP: "GCP",
+            descGCP: "We utilize Google Cloud Platform for scalable and reliable data storage and processing.",
             casesTitle: "Proven Results",
+            ctaButton: "Ready to Automate?",
             case1Title: "From 5 Days to 2 Hours",
             case1Text: "For a leading automotive manufacturer, we automated a critical reporting system, drastically reducing monthly closing time and freeing up the finance team.",
             case2Title: "85% Reduction in Manual Errors",
@@ -712,12 +351,13 @@
             case4Text: "We developed a centralized dashboard for a retail client, consolidating data from multiple sources to provide a single, clear view of their financial health.",
             case5Title: "Custom Scripting for Data Processing",
             case5Text: "For a tech startup, we created custom Python scripts to automate complex data processing tasks, saving hundreds of hours of manual work per month.",
+            case6Title: "AI-Powered Business Insights",
+            case6Text: "For a global logistics leader, we developed an AI agent to answer complex business questions by accessing live data, providing instant and accurate operational insights.",
             aboutTitle: "Meet Our Team",
             aboutVincentName: "Vincent Pernarh",
-            aboutVincent: "Co-founder with a passion for leveraging technology to solve complex business problems and drive strategic growth.",
+            aboutVincent: "Co-founder & AI/Data Specialist. With 3 years of Supply Chain experience, Vincent has developed complex systems and automations for global leaders like DHL in São Paulo. A Control and Automation Engineer from UFMG, he specializes in Python, C#, and React/Next.js to build intelligent, end-to-end solutions that turn complex data into strategic advantages.",
             aboutKaryneName: "Karyne Scheneyder",
-            aboutKaryne: "Co-founder specializing in process analysis and optimization, dedicated to helping clients achieve peak operational efficiency.",
-            partnersTitle: "Our Partners & Clients",
+            aboutKaryne: "Co-founder & Data Strategist. Karyne excels at translating business needs into data-driven insights and empowers teams by creating clear, actionable dashboards in Power BI.",
             contactTitle: "Let's Build Your Solution",
             contactInfo: "Ready to transform your business? Reach out to us directly or fill out the form below.",
             labelName: "Name",
@@ -731,7 +371,9 @@
         }
     };
 
-    let currentLang = 'pt';
+    // Set default language based on browser, fallback to Portuguese
+    const userLang = navigator.language || navigator.userLanguage;
+    let currentLang = userLang.startsWith('en') ? 'en' : 'pt';
 
     function setLanguage(lang) {
         const l = langData[lang];
@@ -762,7 +404,6 @@
             headerMenu.classList.toggle('active');
         });
 
-        // Close menu when a link is clicked
         document.querySelectorAll('#header-menu nav a').forEach(link => {
             link.addEventListener('click', () => {
                 headerMenu.classList.remove('active');
@@ -773,3 +414,4 @@
 
 </body>
 </html>
+
