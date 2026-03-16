@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Procevia - Transformando Dados em Vantagem Estratégica</title>
+<meta name="description" content="A Procevia transforma dados operacionais complexos em vantagens estratégicas através de agentes de IA, automação de processos e dashboards personalizados. Especialistas em logística, supply chain e manufatura.">
+<link rel="icon" type="image/jpeg" href="https://raw.githubusercontent.com/Vincentpernarh1/Procevia/main/procevia_logo2.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="site-header">
+    <img src="https://raw.githubusercontent.com/Vincentpernarh1/Procevia/main/procevia_logo2.jpg" alt="Procevia Logo">
+    <h3>PROCEVIA</h3>
+    <div class="header-menu" id="header-menu">
+        <nav>
+            <a href="#services" data-lang-key="navSolutions">Solutions</a>
+            <a href="#expertise" data-lang-key="navExpertise">Expertise</a>
+            <a href="#cases" data-lang-key="navResults">Results</a>
+            <a href="#about" data-lang-key="navAbout">About Us</a>
+            <a href="#contact" class="nav-cta" data-lang-key="navContact">Free Consult</a>
+        </nav>
+        <button class="lang-toggle" onclick="toggleLang()">EN / PT</button>
+    </div>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+        <i class="fas fa-bars"></i>
+    </button>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-badge">
+        <span class="dot"></span>
+        <span data-lang-key="heroBadge">AI-Powered · Built for Businesses</span>
+    </div>
+    <h1 data-lang-key="heroTitle">From Data Overload to <span class="accent-word">Decisive Action</span></h1>
+    <p data-lang-key="heroText">We transform your complex operational data into a strategic advantage — streamlining workflows, unlocking insights, and deploying intelligent AI agents that drive measurable growth.</p>
+    <div class="hero-ctas">
+        <a href="#contact" class="btn-primary" data-lang-key="heroCta1"><i class="fas fa-calendar-check"></i> Book a Free Consultation</a>
+        <a href="#cases" class="btn-secondary" data-lang-key="heroCta2"><i class="fas fa-chart-line"></i> See Our Results</a>
+    </div>
+</div>
+
+<!-- STATS BAR (social proof above the fold) -->
+<div class="stats-bar">
+    <div class="stats-inner">
+        <div class="stat-item reveal">
+            <span class="stat-number" data-target="85">0</span><span class="stat-number">%</span>
+            <div class="stat-label" data-lang-key="stat1">Reduction in Manual Errors</div>
+        </div>
+        <div class="stat-item reveal">
+            <span class="stat-number" data-target="60">0</span><span class="stat-number">+</span>
+            <div class="stat-label" data-lang-key="stat2">Hours Saved Per Month</div>
+        </div>
+        <div class="stat-item reveal">
+            <span class="stat-number" data-target="40">0</span><span class="stat-number">%</span>
+            <div class="stat-label" data-lang-key="stat3">Avg. Performance Gain</div>
+        </div>
+        <div class="stat-item reveal">
+            <span class="stat-number" data-target="6">0</span><span class="stat-number">+</span>
+            <div class="stat-label" data-lang-key="stat4">Enterprise Projects Delivered</div>
+        </div>
+    </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services" class="section">
+    <div class="section-header reveal">
+        <span class="section-eyebrow" data-lang-key="servicesEyebrow">What We Do</span>
+        <h2 data-lang-key="servicesTitle">Solutions Built Around Your Results</h2>
+        <p class="section-sub" data-lang-key="servicesSub">No templates, no generic software. Every solution is custom-built to solve your specific operational challenges.</p>
+    </div>
+    <div class="services">
+        <div class="card reveal">
+            <div class="card-icon"><i class="fas fa-brain"></i></div>
+            <h3 data-lang-key="service4Title">Intelligent AI Agents</h3>
+            <p data-lang-key="service4Text">We develop custom AI agents that access live data and internal tools, providing instant, accurate answers to complex business questions and automating decision-making.</p>
+            <a href="#contact" class="card-link" data-lang-key="cardLink">Talk to us <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="card reveal">
+            <div class="card-icon"><i class="fas fa-cogs"></i></div>
+            <h3 data-lang-key="service1Title">Workflow Automation</h3>
+            <p data-lang-key="service1Text">We build smart automation engines that liberate your team from manual, repetitive tasks, allowing them to focus on high-value initiatives that drive your business forward.</p>
+            <a href="#contact" class="card-link" data-lang-key="cardLink">Talk to us <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="card reveal">
+            <div class="card-icon"><i class="fas fa-chart-pie"></i></div>
+            <h3 data-lang-key="service2Title">Insightful Data Dashboards</h3>
+            <p data-lang-key="service2Text">We craft bespoke, interactive dashboards that translate raw numbers into a clear story, giving you the real-time visibility needed to make confident, data-backed decisions.</p>
+            <a href="#contact" class="card-link" data-lang-key="cardLink">Talk to us <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="card reveal">
+            <div class="card-icon"><i class="fas fa-stream"></i></div>
+            <h3 data-lang-key="service3Title">Strategic Process Optimization</h3>
+            <p data-lang-key="service3Text">By analyzing your existing workflows, we identify critical bottlenecks and inefficiencies, redesigning your processes for maximum output and a stronger ROI.</p>
+            <a href="#contact" class="card-link" data-lang-key="cardLink">Talk to us <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<div class="how-it-works-bg">
+    <div class="how-it-works-inner">
+        <div class="section-header reveal">
+            <span class="section-eyebrow" data-lang-key="howEyebrow">Our Process</span>
+            <h2 data-lang-key="howTitle">From First Call to Full Deployment</h2>
+            <p class="section-sub" data-lang-key="howSub">We work fast, stay transparent, and deliver systems that your team actually uses.</p>
+        </div>
+        <div class="steps">
+            <div class="step reveal">
+                <div class="step-number">1</div>
+                <h4 data-lang-key="step1Title">Discovery Call</h4>
+                <p data-lang-key="step1Text">We learn about your business, identify the biggest pain points, and scope the right solution — free, no commitment.</p>
+            </div>
+            <div class="step reveal">
+                <div class="step-number">2</div>
+                <h4 data-lang-key="step2Title">Custom Blueprint</h4>
+                <p data-lang-key="step2Text">We design a tailored solution using the right mix of AI, automation, and data tools — and walk you through it clearly.</p>
+            </div>
+            <div class="step reveal">
+                <div class="step-number">3</div>
+                <h4 data-lang-key="step3Title">Build & Deploy</h4>
+                <p data-lang-key="step3Text">We build, test, and launch your solution — with documentation and training so your team is fully empowered from day one.</p>
+            </div>
+            <div class="step reveal">
+                <div class="step-number">4</div>
+                <h4 data-lang-key="step4Title">Ongoing Support</h4>
+                <p data-lang-key="step4Text">We stay close. As your business evolves, we iterate and expand your systems to keep delivering results.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- EXPERTISE -->
+<div class="expertise-bg" id="expertise">
+    <div class="expertise-inner">
+        <div class="section-header reveal">
+            <span class="section-eyebrow" data-lang-key="expertiseEyebrow">Our Stack</span>
+            <h2 data-lang-key="expertiseTitle">Deep Expertise Across the Right Tools</h2>
+            <p class="section-sub" data-lang-key="expertiseSub">We choose the best tool for the job not the most fashionable one.</p>
+        </div>
+        <div class="expertise-grid tech-descriptions">
+
+            <div class="tech-item reveal">
+                <div class="tech-item-inner">
+                    <div class="tech-front"><i class="fa-solid fa-robot"></i><h4 data-lang-key="expertiseAIAgents">AI Agent Development</h4></div>
+                    <div class="tech-back"><i class="fa-solid fa-robot"></i><h4 data-lang-key="expertiseAIAgents">AI Agents</h4><p data-lang-key="descAIAgents">Intelligent agents that connect to your business data and tools for real-time answers.</p></div>
+                </div>
+            </div>
+
+            <div class="tech-item reveal">
+                <div class="tech-item-inner">
+                    <div class="tech-front"><i class="fa-brands fa-python"></i><h4 data-lang-key="expertisePython">Python</h4></div>
+                    <div class="tech-back"><i class="fa-brands fa-python"></i><h4 data-lang-key="expertisePython">Python</h4><p data-lang-key="descPython">Custom scripts for powerful, bespoke automation solutions to any complex challenge.</p></div>
+                </div>
+            </div>
+
+            <div class="tech-item reveal">
+                <div class="tech-item-inner">
+                    <div class="tech-front"><i class="fa-solid fa-gears"></i><h4 data-lang-key="expertisePowerAutomate">Power Automate</h4></div>
+                    <div class="tech-back"><i class="fa-solid fa-gears"></i><h4 data-lang-key="expertisePowerAutomate">Power Automate</h4><p data-lang-key="descPowerAutomate">No-code workflows that connect your apps and save your team hours every day.</p></div>
+                </div>
+            </div>
+
+            <div class="tech-item reveal">
+                <div class="tech-item-inner">
+                    <div class="tech-front"><i class="fa-solid fa-chart-simple"></i><h4 data-lang-key="expertisePowerBI">Power BI</h4></div>
+                    <div class="tech-back"><i class="fa-solid fa-chart-simple"></i><h4 data-lang-key="expertisePowerBI">Power BI</h4><p data-lang-key="descPowerBI">Raw data into clear, interactive dashboards for smarter decision-making.</p></div>
+                </div>
+            </div>
+
+            <div class="tech-item reveal">
+                <div class="tech-item-inner">
+                    <div class="tech-front"><i class="fa-solid fa-bolt"></i><h4 data-lang-key="expertiseZapier">Zapier</h4></div>
+                    <div class="tech-back"><i class="fa-solid fa-bolt"></i><h4 data-lang-key="expertiseZapier">Zapier</h4><p data-lang-key="descZapier">Integrating 3,000+ web apps to automate tasks between your most-used tools.</p></div>
+                </div>
+            </div>
+
+            <div class="tech-item reveal">
+                <div class="tech-item-inner">
+                    <div class="tech-front"><i class="fa-solid fa-database"></i><h4 data-lang-key="expertiseSQL">SQL</h4></div>
+                    <div class="tech-back"><i class="fa-solid fa-database"></i><h4 data-lang-key="expertiseSQL">SQL</h4><p data-lang-key="descSQL">Managing and querying your databases to ensure data integrity and analytics power.</p></div>
+                </div>
+            </div>
+
+            <div class="tech-item reveal">
+                <div class="tech-item-inner">
+                    <div class="tech-front"><i class="fa-solid fa-chart-line"></i><h4 data-lang-key="expertiseDataStudio">Looker Studio</h4></div>
+                    <div class="tech-back"><i class="fa-solid fa-chart-line"></i><h4 data-lang-key="expertiseDataStudio">Looker Studio</h4><p data-lang-key="descDataStudio">Compelling data visualizations and reports with Google's powerful tools.</p></div>
+                </div>
+            </div>
+
+            <div class="tech-item reveal">
+                <div class="tech-item-inner">
+                    <div class="tech-front"><i class="fa-solid fa-layer-group"></i><h4 data-lang-key="expertiseRPA">RPA</h4></div>
+                    <div class="tech-back"><i class="fa-solid fa-layer-group"></i><h4 data-lang-key="expertiseRPA">RPA</h4><p data-lang-key="descRPA">Software robots that handle repetitive, rule-based tasks on legacy systems.</p></div>
+                </div>
+            </div>
+
+            <div class="tech-item reveal">
+                <div class="tech-item-inner">
+                    <div class="tech-front"><i class="fa-solid fa-mobile-screen-button"></i><h4 data-lang-key="expertisePowerApps">Power Apps</h4></div>
+                    <div class="tech-back"><i class="fa-solid fa-mobile-screen-button"></i><h4 data-lang-key="expertisePowerApps">Power Apps</h4><p data-lang-key="descPowerApps">Custom low-code applications to solve your unique business challenges quickly.</p></div>
+                </div>
+            </div>
+
+            <div class="tech-item reveal">
+                <div class="tech-item-inner">
+                    <div class="tech-front"><i class="fa-solid fa-comments"></i><h4 data-lang-key="expertiseChatBot">Chat Bot</h4></div>
+                    <div class="tech-back"><i class="fa-solid fa-comments"></i><h4 data-lang-key="expertiseChatBot">Chat Bot</h4><p data-lang-key="descChatBot">Intelligent chatbots to automate customer service and internal support tasks.</p></div>
+                </div>
+            </div>
+
+            <div class="tech-item reveal">
+                <div class="tech-item-inner">
+                    <div class="tech-front"><i class="fa-solid fa-project-diagram"></i><h4 data-lang-key="expertiseMachineLearning">Machine Learning</h4></div>
+                    <div class="tech-back"><i class="fa-solid fa-project-diagram"></i><h4 data-lang-key="expertiseMachineLearning">ML</h4><p data-lang-key="descMachineLearning">Predictive models to forecast trends and uncover hidden opportunities in your data.</p></div>
+                </div>
+            </div>
+
+            <div class="tech-item reveal">
+                <div class="tech-item-inner">
+                    <div class="tech-front"><i class="fa-brands fa-google"></i><h4 data-lang-key="expertiseGCP">GCP</h4></div>
+                    <div class="tech-back"><i class="fa-brands fa-google"></i><h4 data-lang-key="expertiseGCP">GCP</h4><p data-lang-key="descGCP">Google Cloud Platform for scalable and reliable data storage and processing.</p></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- CASE STUDIES -->
+<section id="cases" class="section">
+    <div class="section-header reveal">
+        <span class="section-eyebrow" data-lang-key="casesEyebrow">Proven Results</span>
+        <h2 data-lang-key="casesTitle">Real Projects. Measurable Impact.</h2>
+        <p class="section-sub" data-lang-key="casesSub">Every number here is from a real client project — no estimates, no projections.</p>
+    </div>
+    <div class="case-studies">
+        <div class="card case-card reveal">
+            <img src="https://images.ctfassets.net/5965pury2lcm/1EEj0m4w5CIiJ2m24L4dXV/9924513768343cbf4b69325983c27b00/LangChain.jpg" alt="AI Agent Interface" onerror="this.onerror=null;this.src='https://placehold.co/600x400/00695c/ffffff?text=AI+Agent';">
+            <span class="result-badge">Global Logistics Leader</span>
+            <h3 data-lang-key="case6Title">AI-Powered Business Insights</h3>
+            <p data-lang-key="case6Text">We developed an AI agent to answer complex business questions by accessing live data, providing instant and accurate operational insights.</p>
+        </div>
+        <div class="card case-card reveal">
+            <img src="https://thereportinghub.com/img/power-bi-dashboards/marketing-campaign-dashboard.svg" alt="Dashboard showing financial automation" onerror="this.onerror=null;this.src='https://placehold.co/600x400/00695c/ffffff?text=Financial+Report';">
+            <span class="result-badge">Automotive Manufacturer</span>
+            <h3 data-lang-key="case1Title">From 5 Days to 2 Hours</h3>
+            <p data-lang-key="case1Text">We automated a critical reporting system, drastically reducing monthly closing time and freeing up the entire finance team for higher-value work.</p>
+        </div>
+        <div class="card case-card reveal">
+            <img src="https://i.ytimg.com/vi/G8ikAJele_s/hq720.jpg" alt="Dashboard showing inventory accuracy" onerror="this.onerror=null;this.src='https://placehold.co/600x400/ff6d00/ffffff?text=Inventory+Accuracy';">
+            <span class="result-badge">Major Logistics Partner</span>
+            <h3 data-lang-key="case2Title">85% Reduction in Manual Errors</h3>
+            <p data-lang-key="case2Text">A new inventory automation process boosted data accuracy and operational speed across the entire supply chain operation.</p>
+        </div>
+        <div class="card case-card reveal">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPFjbHBO4GmYV65xNF3E0l5IcvjbasrOyt_w&s" alt="Logistics dashboard" onerror="this.onerror=null;this.src='https://placehold.co/600x400/333333/ffffff?text=Workflow+Automation';">
+            <span class="result-badge">Global Shipping Leader</span>
+            <h3 data-lang-key="case3Title">40% Improvement in Performance Tracking</h3>
+            <p data-lang-key="case3Text">A custom, real-time logistics dashboard provided unprecedented visibility, directly enhancing delivery performance at scale.</p>
+        </div>
+        <div class="card case-card reveal">
+            <img src="https://ef43287171.cbaul-cdnwnd.com/35835353fd11f6f9c2ed7b2a2b5bc48b/200000074-d676fd6771/dash%2001.png?ph=ef43287171" alt="Business intelligence dashboard" onerror="this.onerror=null;this.src='https://placehold.co/600x400/00695c/ffffff?text=Financial+Overview';">
+            <span class="result-badge">Retail Client</span>
+            <h3 data-lang-key="case4Title">Unified Financial Overview</h3>
+            <p data-lang-key="case4Text">A centralized dashboard consolidated data from multiple sources into a single, clear view of financial health — enabling faster decisions.</p>
+        </div>
+        <div class="card case-card reveal">
+            <img src="https://onlinedegrees.sandiego.edu/wp-content/uploads/2023/05/6-careers-you-can-get-with-python.jpg" alt="Python automation" onerror="this.onerror=null;this.src='https://placehold.co/600x400/ff6d00/ffffff?text=Custom+Scripting';">
+            <span class="result-badge">Tech Startup</span>
+            <h3 data-lang-key="case5Title">Custom Scripting for Data Processing</h3>
+            <p data-lang-key="case5Text">Custom Python scripts automated complex data processing tasks, saving hundreds of hours of manual work per month.</p>
+        </div>
+    </div>
+
+    <!-- CTA Banner inside cases section -->
+    <div class="cta-banner-full reveal">
+        <h3 data-lang-key="ctaBannerTitle">Ready to be our next case study?</h3>
+        <p data-lang-key="ctaBannerText">Book a free 30-minute consultation. We'll map out where automation can save you the most time and money.</p>
+        <a href="#contact" class="btn-primary cta-inline-btn" data-lang-key="ctaButton"><i class="fas fa-calendar-check"></i> Book Free Consultation</a>
+    </div>
+</section>
+
+<!-- TEAM / ABOUT -->
+<section id="about" class="about-section">
+    <div class="about-container">
+        <div class="section-header reveal">
+            <span class="section-eyebrow" data-lang-key="aboutEyebrow">The Team</span>
+            <h2 data-lang-key="aboutTitle">Built by Engineers Who've Worked in the Field</h2>
+            <p class="section-sub" data-lang-key="aboutSub">We don't just know the tools — we've used them to solve real problems inside global companies.</p>
+        </div>
+        <div class="team">
+            <div class="card team-card reveal">
+                <img src="https://github.com/Vincentpernarh1/Procevia/blob/main/profile.jpeg?raw=true" alt="Vincent Pernarh">
+                <h3 data-lang-key="aboutVincentName">Vincent Pernarh</h3>
+                <span class="role-badge">Co-founder · AI & Data</span>
+                <p data-lang-key="aboutVincent">Co-founder & AI/Data Specialist. With 3 years of Supply Chain experience at global leaders like DHL in São Paulo, Vincent is a Control and Automation Engineer from UFMG — specializing in Python, C#, and React/Next.js to build intelligent, end-to-end solutions.</p>
+            </div>
+            <div class="card team-card reveal">
+                <img src="https://placehold.co/120x120/00695c/ffffff?text=IR" alt="Igor Rodrigues">
+                <h3 data-lang-key="aboutKaryneName">Igor Rodrigues</h3>
+                <span class="role-badge">Co-founder · Data Strategy</span>
+                <p data-lang-key="aboutKaryne">Co-founder & Data Strategist. Igor excels at translating business needs into data-driven insights and empowers teams by creating clear, actionable dashboards in Power BI.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+    <div class="section-header reveal">
+        <span class="section-eyebrow" data-lang-key="contactEyebrow">Get In Touch</span>
+        <h2 data-lang-key="contactTitle">Let's Build Your Solution</h2>
+        <p class="section-sub" data-lang-key="contactSub">Book a free 30-minute consultation and we'll show you exactly what's possible for your business.</p>
+    </div>
+    <div class="contact-split">
+        <div class="contact-info-col reveal">
+            <h3 data-lang-key="contactInfoTitle">Talk to us directly</h3>
+            <p data-lang-key="contactInfo">We respond quickly. Prefer messaging? WhatsApp is the fastest way to reach us.</p>
+            <a class="contact-detail" href="/cdn-cgi/l/email-protection#96e6e4f9f5f3e0fff7b8e2f3f5fed6f1fbf7fffab8f5f9fb">
+                <i class="fas fa-envelope"></i>
+                <span><span class="__cf_email__" data-cfemail="b3c3c1dcd0d6c5dad29dc7d6d0dbf3d4ded2dadf9dd0dcde">[email&#160;protected]</span></span>
+            </a>
+            <a class="contact-detail" href="https://wa.me/553191526927" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i>
+                <span>+55 31 9152-6927 (WhatsApp)</span>
+            </a>
+            <a class="contact-detail" href="https://www.instagram.com/procevia.tech" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-instagram"></i>
+                <span>@procevia.tech</span>
+            </a>
+            <div class="free-consult-note">
+                <i class="fas fa-gift gift-icon"></i>
+                <span data-lang-key="freeConsult">First consultation is 100% free — no commitment, just clarity on what's possible.</span>
+            </div>
+        </div>
+        <div class="reveal">
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="name" data-lang-key="labelName">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" data-lang-key-placeholder="namePlaceholder" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" data-lang-key="labelEmail">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email Address" data-lang-key-placeholder="emailPlaceholder" required>
+                </div>
+                <div class="form-group">
+                    <label for="challenge" data-lang-key="labelChallenge">What's your biggest operational challenge?</label>
+                    <select id="challenge" name="challenge">
+                        <option value="" data-lang-key="challengeDefault">Select a category...</option>
+                        <option value="automation" data-lang-key="challengeAuto">Manual & repetitive tasks slowing us down</option>
+                        <option value="integration" data-lang-key="challengeData">No clear visibility into our data</option>
+                        <option value="ai" data-lang-key="challengeAI">Want to leverage AI but don't know where to start</option>
+                        <option value="process" data-lang-key="challengeProcess">Processes are inefficient / hard to scale</option>
+                        <option value="redesign" data-lang-key="challengeRedesign">Need to redesign inefficient processes</option>
+                        <option value="other" data-lang-key="challengeOther">Something else</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message" data-lang-key="labelMessage">Tell us more</label>
+                    <textarea id="message" name="message" rows="4" placeholder="How can we help you achieve your goals?" data-lang-key-placeholder="messagePlaceholder"></textarea>
+                </div>
+                <button type="submit" class="submit-btn" data-lang-key="submitBtn">
+                    <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+                <p id="form-status"></p>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- SOCIAL -->
+<section class="social-media">
+    <h2 data-lang-key="socialTitle">Follow Us</h2>
+    <div class="social-icons">
+        <a href="#" class="social-icon" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/procevia.tech?igsh=MWNjaWx4YnFsYXRveg%3D%3D&utm_source=qr" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Procevia. Todos os Direitos Reservados. · <a href="/cdn-cgi/l/email-protection#d8a8aab7bbbdaeb1b9f6acbdbbb098bfb5b9b1b4f6bbb7b5" class="footer-link"><span class="__cf_email__" data-cfemail="a2d2d0cdc1c7d4cbc38cd6c7c1cae2c5cfc3cbce8cc1cdcf">[email&#160;protected]</span></a></p>
+</footer>
+
+<a href="https://wa.me/553191526927" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    // ── Language Data ─────────────────────────────────
+    const langData = {
+        pt: {
+            navSolutions: "Soluções", navExpertise: "Expertise", navResults: "Resultados",
+            navAbout: "Sobre Nós", navContact: "Consulta Grátis",
+            heroBadge: "Supply Chain & Sistemas · Impulsionado por IA",
+            heroTitle: "Transforme Dados Operacionais em <span class='accent-word'>Decisões Estratégicas</span>",
+            heroText: "Conectamos e otimizamos seus sistemas de supply chain através de integrações inteligentes, automação de processos end-to-end e agentes de IA que extraem insights dos seus dados operacionais — ERP, WMS, TMS e além.",
+            heroCta1: '<i class="fas fa-calendar-check"></i> Agendar Consulta Gratuita',
+            heroCta2: '<i class="fas fa-chart-line"></i> Ver Nossos Resultados',
+            stat1: "Redução em Erros Operacionais", stat2: "Horas Economizadas/Mês",
+            stat3: "Melhoria em Eficiência de Processos", stat4: "Projetos de Supply Chain Entregues",
+            servicesEyebrow: "Soluções de Supply Chain", servicesTitle: "Transformação Digital para Operações Complexas",
+            servicesSub: "Da integração de sistemas à automação de processos — desenvolvemos soluções que conectam toda sua cadeia de suprimentos.",
+            service1Title: "Integração e Automação de Sistemas",
+            service1Text: "Conectamos seus sistemas (ERP, WMS, TMS, CRM) e automatizamos fluxos de dados end-to-end. Elimine transferências manuais, retrabalho e inconsistências entre plataformas. Seus sistemas conversam em tempo real.",
+            service2Title: "Business Intelligence & Dashboards",
+            service2Text: "Transformamos dados brutos de múltiplos sistemas em insights acionáveis. Dashboards em tempo real que consolidam informações de toda cadeia: compras, produção, estoque, vendas, finanças e logística.",
+            service3Title: "Otimização de Processos Supply Chain",
+            service3Text: "Analisamos sua operação end-to-end: procurement, planning, manufacturing, fulfillment. Identificamos gargalos sistêmicos, redesenhamos fluxos e implementamos automações que reduzem lead time e custos operacionais.",
+            service4Title: "Agentes de IA para Supply Chain",
+            service4Text: "Assistentes de IA conectados aos seus sistemas: 'Qual o impacto do atraso do fornecedor X?', 'Onde está o gargalo na produção?', 'Qual o custo real desta ordem?'. Respostas instantâneas consultando ERP, WMS, TMS e mais.",
+            cardLink: "Falar conosco",
+            howEyebrow: "Nosso Processo", howTitle: "Do Diagnóstico de Sistemas à Transformação Digital",
+            howSub: "Mapeamos seu ecossistema de sistemas, identificamos oportunidades de integração e entregamos soluções que conectam toda sua operação.",
+            step1Title: "Diagnóstico de Sistemas", step1Text: "Auditamos seu ambiente tecnológico: ERPs, WMS, TMS, planilhas, processos manuais. Identificamos silos de dados, processos duplicados e oportunidades de integração — diagnóstico 100% gratuito.",
+            step2Title: "Arquitetura de Solução", step2Text: "Desenvolvemos a arquitetura técnica: integrações via API, automações de processo, pipelines de dados e dashboards. Solução alinhada com sua stack atual e objetivos de negócio.",
+            step3Title: "Implementação e Integração", step3Text: "Construímos e testamos integrações, automações e dashboards. Deploy incremental com mínima interrupção. Sua equipe recebe documentação técnica completa e treinamento operacional.",
+            step4Title: "Monitoria e Evolução", step4Text: "Monitoramos performance dos sistemas, ROI das automações e saúde das integrações. Evoluímos a solução conforme novos sistemas são adicionados e processos mudam.",
+            expertiseEyebrow: "Nossa Stack", expertiseTitle: "Expertise Profunda nas Ferramentas Certas",
+            expertiseSub: "Escolhemos a melhor ferramenta para o trabalho — não a mais da moda.",
+            expertiseAIAgents: "Desenvolvimento de Agentes IA", descAIAgents: "Agentes inteligentes que se conectam aos seus dados para respostas em tempo real.",
+            expertisePython: "Python", descPython: "Scripts personalizados para automações poderosas e sob medida.",
+            expertisePowerAutomate: "Power Automate", descPowerAutomate: "Fluxos sem código que conectam seus apps e economizam horas por dia.",
+            expertisePowerBI: "Power BI", descPowerBI: "Dados brutos em dashboards claros e interativos.",
+            expertiseZapier: "Zapier", descZapier: "Integrando +3.000 apps para automatizar tarefas entre suas ferramentas.",
+            expertiseSQL: "SQL", descSQL: "Gerenciamento de bancos de dados para integridade e analytics.",
+            expertiseDataStudio: "Google Looker Studio", descDataStudio: "Visualizações e relatórios com as ferramentas do Google.",
+            expertiseRPA: "RPA", descRPA: "Robôs de software para tarefas repetitivas em sistemas legados.",
+            expertisePowerApps: "Power Apps", descPowerApps: "Aplicativos low-code para resolver desafios únicos rapidamente.",
+            expertiseChatBot: "Chat Bot", descChatBot: "Chatbots para automatizar atendimento e suporte interno.",
+            expertiseMachineLearning: "Machine Learning", descMachineLearning: "Modelos preditivos para prever tendências e descobrir oportunidades.",
+            expertiseGCP: "GCP", descGCP: "Google Cloud para armazenamento e processamento escaláveis.",
+            casesEyebrow: "Resultados Comprovados", casesTitle: "Problemas Sistêmicos. Soluções Mensuráveis.",
+            casesSub: "Cada resultado vem de projetos reais de integração, automação e transformação digital em supply chain — números verificados, não promessas.",
+            case1Title: "Integração ERP-WMS: 5 Dias → 2 Horas", case1Text: "Montadora Automotiva: Integramos SAP com sistema de warehouse, automatizando fluxo de dados e relatórios. Eliminamos transferências manuais e reconciliações, reduzindo fechamento mensal de 5 dias para 2 horas.",
+            case2Title: "85% Redução em Inconsistências de Dados", case2Text: "Operador Logístico: Implementamos sincronização em tempo real entre WMS, TMS e sistema financeiro. Eliminamos divergências de dados entre sistemas que causavam retrabalho e decisões erradas.",
+            case3Title: "Dashboard Unificado: 3 Sistemas, 1 Visão", case3Text: "Distribuidor B2B: Consolidamos dados de ERP, CRM e TMS em dashboard único. Visibilidade end-to-end do pedido ao pagamento melhorou forecast accuracy em 40% e reduziu capital de giro.",
+            case4Title: "Automação End-to-End: Pedido → Invoice", case4Text: "Varejista Online: Automatizamos fluxo completo desde captura de pedido (e-commerce) até emissão de nota fiscal (ERP), passando por WMS. Zero intervenção manual, 99.7% de acuracidade.",
+            case5Title: "Pipeline de Dados: De Planilhas a BI", case5Text: "Indústria de Alimentos: Substituímos 40+ planilhas por pipeline automatizado de dados. ETL conecta sistemas legados ao Power BI, economizando 200+ horas/mês e melhorando qualidade das decisões.",
+            case6Title: "Agente de IA Conectado a 4 Sistemas", case6Text: "Empresa de Supply Chain: Desenvolvemos assistente de IA que consulta SAP, Oracle WMS, TMS e Power BI para responder perguntas complexas sobre operações, custos e performance — respostas em segundos.",
+            ctaBannerTitle: "Seus sistemas estão conversando entre si?",
+            ctaBannerText: "Agende 30 minutos gratuitos. Vamos mapear seu ecossistema de sistemas e mostrar onde integrações e automações podem eliminar silos de dados e processos manuais.",
+            ctaButton: '<i class="fas fa-calendar-check"></i> Agendar Consulta Gratuita',
+            aboutEyebrow: "Quem Somos", aboutTitle: "Engenheiros que Entendem Sistemas e Supply Chain",
+            aboutSub: "Não somos consultores teóricos — implementamos sistemas, integrações e automações dentro de operações globais complexas.",
+            aboutVincentName: "Vincent Pernarh",
+            aboutVincent: "Cofundador e Especialista em IA e Integração de Sistemas. 3 anos em Supply Chain na DHL, integrando sistemas e automatizando processos em ambiente multi-ERP. Engenheiro de Controle e Automação (UFMG). Expert em Python, C#, APIs, Power BI e agentes de IA para ambientes corporativos.",
+            aboutKaryneName: "Igor Rodrigues",
+            aboutKaryne: "Cofundador e Especialista em Business Intelligence. Transforma dados dispersos em múltiplos sistemas em insights unificados. Expert em Power BI, SQL, ETL e modelagem de dados — conectando ERPs, WMS, TMS e sistemas legados em dashboards executivos.",
+            contactEyebrow: "Fale Conosco", contactTitle: "Vamos Conectar Seus Sistemas",
+            contactSub: "Agende 30 minutos gratuitos e descubra como integrar seus sistemas, automatizar processos e ter visibilidade end-to-end da sua operação.",
+            contactInfoTitle: "Entre em contato diretamente",
+            contactInfo: "Respondemos rapidamente. WhatsApp é o canal mais ágil para discutir integrações, automações e agendar sua consultoria gratuita.",
+            labelName: "Nome", labelEmail: "Email",
+            labelChallenge: "Qual é seu maior desafio operacional?",
+            challengeDefault: "Selecione uma categoria...",
+            challengeAuto: "Dados transferidos manualmente entre sistemas",
+            challengeData: "Sistemas isolados sem integração",
+            challengeAI: "Quero IA conectada aos nossos sistemas",
+            challengeProcess: "Processos dependem de planilhas e retrabalho",
+            challengeRedesign: "Preciso redesenhar processos ineficientes",
+            challengeOther: "Outro desafio sistêmico",
+            labelMessage: "Conte mais sobre seus sistemas",
+            namePlaceholder: "Seu Nome", emailPlaceholder: "Seu Email",
+            messagePlaceholder: "Descreva seus sistemas: ERP, WMS, TMS, planilhas, integrações necessárias...",
+            submitBtn: '<i class="fas fa-paper-plane"></i> Enviar Mensagem',
+            freeConsult: "Primeira consulta 100% gratuita — sem compromisso. Vamos identificar exatamente onde você pode eliminar silos de sistemas e ganhar eficiência.",
+            socialTitle: "Siga-nos",
+            formSuccess: "Mensagem enviada! Entraremos em contato em breve.",
+        },
+        en: {
+            navSolutions: "Solutions", navExpertise: "Expertise", navResults: "Results",
+            navAbout: "About Us", navContact: "Free Consult",
+            heroBadge: "Supply Chain & Systems · AI-Powered",
+            heroTitle: "Turn Operational Data into <span class='accent-word'>Strategic Decisions</span>",
+            heroText: "We connect and optimize your supply chain systems through intelligent integrations, end-to-end process automation, and AI agents that extract insights from your operational data — ERP, WMS, TMS and beyond.",
+            heroCta1: '<i class="fas fa-calendar-check"></i> Book a Free Consultation',
+            heroCta2: '<i class="fas fa-chart-line"></i> See Our Results',
+            stat1: "Reduction in Operational Errors", stat2: "Hours Saved Per Month",
+            stat3: "Process Efficiency Improvement", stat4: "Supply Chain Projects Delivered",
+            servicesEyebrow: "Supply Chain Solutions", servicesTitle: "Digital Transformation for Complex Operations",
+            servicesSub: "From system integration to process automation — we build solutions that connect your entire supply chain.",
+            service1Title: "System Integration & Automation",
+            service1Text: "We connect your systems (ERP, WMS, TMS, CRM) and automate end-to-end data flows. Eliminate manual transfers, rework, and inconsistencies between platforms. Your systems communicate in real-time.",
+            service2Title: "Business Intelligence & Dashboards",
+            service2Text: "We transform raw data from multiple systems into actionable insights. Real-time dashboards consolidating information across the chain: procurement, production, inventory, sales, finance, and logistics.",
+            service3Title: "Supply Chain Process Optimization",
+            service3Text: "We analyze your end-to-end operation: procurement, planning, manufacturing, fulfillment. Identify systemic bottlenecks, redesign flows, and implement automations that reduce lead time and operational costs.",
+            service4Title: "AI Agents for Supply Chain",
+            service4Text: "AI assistants connected to your systems: 'What's the impact of supplier X delay?', 'Where's the production bottleneck?', 'What's the real cost of this order?'. Instant answers querying ERP, WMS, TMS and more.",
+            cardLink: "Talk to us",
+            howEyebrow: "Our Process", howTitle: "From System Diagnosis to Digital Transformation",
+            howSub: "We map your technology ecosystem, identify integration opportunities, and deliver solutions that connect your entire operation.",
+            step1Title: "System Diagnosis", step1Text: "We audit your technology environment: ERPs, WMS, TMS, spreadsheets, manual processes. Identify data silos, duplicate processes, and integration opportunities — 100% free diagnosis.",
+            step2Title: "Solution Architecture", step2Text: "We develop the technical architecture: API integrations, process automations, data pipelines, and dashboards. Solution aligned with your current stack and business objectives.",
+            step3Title: "Implementation & Integration", step3Text: "We build and test integrations, automations, and dashboards. Incremental deployment with minimal disruption. Your team receives complete technical documentation and operational training.",
+            step4Title: "Monitoring & Evolution", step4Text: "We monitor system performance, automation ROI, and integration health. We evolve the solution as new systems are added and processes change.",
+            expertiseEyebrow: "Our Stack", expertiseTitle: "Deep Expertise Across the Right Tools",
+            expertiseSub: "We choose the best tool for the job not the most fashionable one.",
+            expertiseAIAgents: "AI Agent Development", descAIAgents: "Intelligent agents that connect to your business data for real-time answers.",
+            expertisePython: "Python", descPython: "Custom scripts for powerful, bespoke automation solutions.",
+            expertisePowerAutomate: "Power Automate", descPowerAutomate: "No-code workflows that connect your apps and save hours daily.",
+            expertisePowerBI: "Power BI", descPowerBI: "Raw data into clear, interactive dashboards for smarter decisions.",
+            expertiseZapier: "Zapier", descZapier: "Integrating 3,000+ web apps to automate tasks between your tools.",
+            expertiseSQL: "SQL", descSQL: "Managing and querying databases for data integrity and analytics.",
+            expertiseDataStudio: "Google Looker Studio", descDataStudio: "Compelling data visualizations and reports with Google's tools.",
+            expertiseRPA: "RPA", descRPA: "Software robots for repetitive, rule-based tasks on legacy systems.",
+            expertisePowerApps: "Power Apps", descPowerApps: "Custom low-code applications to solve unique challenges quickly.",
+            expertiseChatBot: "Chat Bot", descChatBot: "Intelligent chatbots to automate customer service and support.",
+            expertiseMachineLearning: "Machine Learning", descMachineLearning: "Predictive models to forecast trends and uncover hidden opportunities.",
+            expertiseGCP: "GCP", descGCP: "Google Cloud Platform for scalable data storage and processing.",
+            casesEyebrow: "Proven Results", casesTitle: "Systemic Problems. Measurable Solutions.",
+            casesSub: "Every result comes from real integration, automation, and digital transformation projects in supply chain — verified numbers, not promises.",
+            case1Title: "ERP-WMS Integration: 5 Days → 2 Hours",
+            case1Text: "Automotive Manufacturer: We integrated SAP with warehouse system, automating data flow and reports. Eliminated manual transfers and reconciliations, reducing monthly closing from 5 days to 2 hours.",
+            case2Title: "85% Reduction in Data Inconsistencies",
+            case2Text: "Logistics Operator: Implemented real-time synchronization between WMS, TMS, and financial system. Eliminated data discrepancies between systems that caused rework and wrong decisions.",
+            case3Title: "Unified Dashboard: 3 Systems, 1 View",
+            case3Text: "B2B Distributor: Consolidated data from ERP, CRM, and TMS into single dashboard. End-to-end visibility from order to payment improved forecast accuracy by 40% and reduced working capital.",
+            case4Title: "End-to-End Automation: Order → Invoice",
+            case4Text: "Online Retailer: Automated complete flow from order capture (e-commerce) to invoice issuance (ERP), through WMS. Zero manual intervention, 99.7% accuracy.",
+            case5Title: "Data Pipeline: From Spreadsheets to BI",
+            case5Text: "Food Industry: Replaced 40+ spreadsheets with automated data pipeline. ETL connects legacy systems to Power BI, saving 200+ hours/month and improving decision quality.",
+            case6Title: "AI Agent Connected to 4 Systems",
+            case6Text: "Supply Chain Company: Developed AI assistant that queries SAP, Oracle WMS, TMS, and Power BI to answer complex questions about operations, costs, and performance — answers in seconds.",
+            ctaBannerTitle: "Are your systems talking to each other?",
+            ctaBannerText: "Schedule 30 free minutes. We'll map your systems ecosystem and show where integrations and automations can eliminate data silos and manual processes.",
+            ctaButton: '<i class="fas fa-calendar-check"></i> Book Free Consultation',
+            aboutEyebrow: "Who We Are", aboutTitle: "Engineers Who Understand Systems and Supply Chain",
+            aboutSub: "We're not theoretical consultants — we implement systems, integrations, and automations inside complex global operations.",
+            aboutVincentName: "Vincent Pernarh",
+            aboutVincent: "Co-founder & AI and System Integration Specialist. 3 years in Supply Chain at DHL, integrating systems and automating processes in multi-ERP environment. Control and Automation Engineer (UFMG). Expert in Python, C#, APIs, Power BI, and AI agents for corporate environments.",
+            aboutKaryneName: "Igor Rodrigues",
+            aboutKaryne: "Co-founder & Business Intelligence Specialist. Transforms scattered data across multiple systems into unified insights. Expert in Power BI, SQL, ETL, and data modeling — connecting ERPs, WMS, TMS, and legacy systems into executive dashboards.",
+            contactEyebrow: "Get In Touch", contactTitle: "Let's Connect Your Systems",
+            contactSub: "Schedule 30 free minutes and discover how to integrate your systems, automate processes, and have end-to-end visibility of your operation.",
+            contactInfoTitle: "Contact us directly",
+            contactInfo: "We respond quickly. WhatsApp is the fastest channel to discuss integrations, automations, and schedule your free consultation.",
+            labelName: "Name", labelEmail: "Email",
+            labelChallenge: "What's your biggest operational challenge?",
+            challengeDefault: "Select a category...",
+            challengeAuto: "Manual data transfer between systems",
+            challengeData: "Isolated systems without integration",
+            challengeAI: "Want AI connected to our systems",
+            challengeProcess: "Processes depend on spreadsheets and rework",
+            challengeRedesign: "Need to redesign inefficient processes",
+            challengeOther: "Other systemic challenge",
+            labelMessage: "Tell us more about your systems",
+            namePlaceholder: "Your Name", emailPlaceholder: "Your Email Address",
+            messagePlaceholder: "Describe your systems: ERP, WMS, TMS, spreadsheets, needed integrations...",
+            submitBtn: '<i class="fas fa-paper-plane"></i> Send Message',
+            freeConsult: "First consultation is 100% free — no commitment. We'll identify exactly where you can save time and eliminate system silos.",
+            socialTitle: "Follow Us",
+            formSuccess: "Message sent! We'll be in touch shortly.",
+        }
+    };
+
+    // Default to Portuguese
+    let currentLang = 'pt';
+
+    function setLanguage(lang) {
+        const l = langData[lang];
+        document.querySelectorAll('[data-lang-key]').forEach(elem => {
+            const key = elem.dataset.langKey;
+            if (l[key] !== undefined) {
+                elem.innerHTML = l[key];
+            }
+        });
+        document.querySelectorAll('[data-lang-key-placeholder]').forEach(elem => {
+            const key = elem.dataset.langKeyPlaceholder;
+            if (l[key] !== undefined) elem.placeholder = l[key];
+        });
+        // Update select options
+        document.querySelectorAll('select option[data-lang-key]').forEach(opt => {
+            const key = opt.dataset.langKey;
+            if (l[key]) opt.textContent = l[key];
+        });
+    }
+
+    function toggleLang() {
+        currentLang = currentLang === 'pt' ? 'en' : 'pt';
+        setLanguage(currentLang);
+    }
+
+    // ── Scroll reveal ──────────────────────────────────
+    function initReveal() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    }
+
+    // ── Counter animation ──────────────────────────────
+    function animateCounters() {
+        const counters = document.querySelectorAll('.stat-number[data-target]');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (!e.isIntersecting) return;
+                const el = e.target;
+                const target = parseInt(el.dataset.target);
+                let current = 0;
+                const step = target / 40;
+                const timer = setInterval(() => {
+                    current = Math.min(current + step, target);
+                    el.textContent = Math.round(current);
+                    if (current >= target) clearInterval(timer);
+                }, 30);
+                observer.unobserve(el);
+            });
+        }, { threshold: 0.5 });
+        counters.forEach(c => observer.observe(c));
+    }
+
+    // ── Header shadow on scroll ────────────────────────
+    function initHeaderScroll() {
+        const header = document.getElementById('site-header');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 20);
+        });
+    }
+
+    // ── Mobile menu ────────────────────────────────────
+    function initMobileMenu() {
+        const toggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('header-menu');
+        toggle.addEventListener('click', () => menu.classList.toggle('active'));
+        menu.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => menu.classList.remove('active'));
+        });
+    }
+
+    // ── Contact form (WhatsApp + mailto fallback) ──────
+    function initContactForm() {
+        const form = document.getElementById('contact-form');
+        const status = document.getElementById('form-status');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const challenge = document.getElementById('challenge').value;
+            const message = document.getElementById('message').value.trim();
+            const text = `*New Procevia Inquiry*\n\n*Name:* ${name}\n*Email:* ${email}\n*Challenge:* ${challenge}\n*Message:* ${message || 'N/A'}`;
+            const waUrl = `https://wa.me/553191526927?text=${encodeURIComponent(text)}`;
+            window.open(waUrl, '_blank');
+            status.style.display = 'block';
+            status.textContent = langData[currentLang].formSuccess || 'Opening WhatsApp...';
+            form.reset();
+        });
+    }
+
+    // ── Touch flip for expertise cards (mobile) ────────
+    function initFlipCards() {
+        document.querySelectorAll('.tech-item').forEach(card => {
+            card.addEventListener('click', () => card.classList.toggle('flipped'));
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        setLanguage(currentLang);
+        initReveal();
+        animateCounters();
+        initHeaderScroll();
+        initMobileMenu();
+        initContactForm();
+        initFlipCards();
+    });
+</script>
+</body>
+</html>
